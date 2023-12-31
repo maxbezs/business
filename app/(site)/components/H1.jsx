@@ -1,6 +1,10 @@
 const H1 = ({ styles, children }) => {
   return (
-    <h1 className={styles + " text-4xl md:text-5xl lg:text-6xl font-bold mb-4"}>
+    <h1
+      className={
+        styles + " text-3xl md:text-[48px] lg:text-[60px] font-bold mb-4"
+      }
+    >
       {children}
     </h1>
   );

@@ -20,7 +20,7 @@ export default async function Scope({ params }) {
       <H1>{scope.title}</H1>
       <Breadcrumbs />
       <div className="flex gap-6 pt-4">
-        <div className="w-3/4">
+        <div className="lg:w-3/4 w-full">
           {sortedSections.map((categoryData, index) => (
             <Section
               key={index}

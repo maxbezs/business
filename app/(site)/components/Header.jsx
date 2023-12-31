@@ -51,7 +51,7 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-black fixed top-0 left-0 w-full transition-transform duration-300 filter z-50 px-6 transform ${
+      className={`bg-neutral-950 border-b-[1px] border-neutral-800 fixed top-0 left-0 w-full transition-transform duration-300 filter z-50 px-6 transform ${
         visible ? "translate-y-0 " : "-translate-y-full "
       } `}
     >
@@ -85,12 +85,18 @@ const Header = () => {
         <nav
           className={`md:flex space-x-4 ${
             isSidebarOpen
-              ? "fixed top-0 right-0 w-64 h-[calc(100vh+69px)] text-white transition-transform transform translate-x-0 bg-neutral-800"
-              : "hidden"
+              ? " fixed top-0 right-0 w-full h-[calc(100vh+69px)] text-white transition-transform transform translate-x-0 bg-neutral-950"
+              : "hidden "
           }`}
         >
-          <ul className={` ${isSidebarOpen ? "" : "md:flex md:space-x-12"}`}>
-            <li>
+          <ul
+            className={` ${
+              isSidebarOpen
+                ? "w-full h-full flex flex-col mt-24 gap-8"
+                : "md:flex md:space-x-12"
+            }`}
+          >
+            <li className="w-fit mx-auto">
               <Link
                 href="/blog"
                 className={
@@ -98,20 +104,22 @@ const Header = () => {
                     ? " text-white font-cfont underline decoration-2"
                     : "text-white font-cfont "
                 }
+                onClick={isSidebarOpen ? toggleSidebar : null}
               >
                 Blog
               </Link>
             </li>
-            <li>
+            <li className="w-fit mx-auto">
               <Link
-                href="/pricing"
+                href="/contact-us"
                 className={
                   activePath === "/services"
                     ? " text-white font-cfont underline decoration-2"
                     : "text-white font-cfont "
                 }
+                onClick={isSidebarOpen ? toggleSidebar : null}
               >
-                Pricing
+                Contact
               </Link>
             </li>
           </ul>
@@ -138,7 +146,7 @@ const Header = () => {
             </button>
           )}
         </nav>
-        <Button styles="hidden md:block " href="/contact-us">
+        <Button styles="hidden md:block " href="/pricing">
           Get Started
         </Button>
       </div>

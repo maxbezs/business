@@ -17,7 +17,10 @@ const Breadcrumbs = () => {
   return (
     <div className="flex h-fit w-fit my-4">
       <nav data-slot="base" aria-label="Breadcrumbs">
-        <ol data-slot="list" className="flex flex-wrap list-none rounded-small">
+        <ol
+          data-slot="list"
+          className="flex flex-wrap list-none rounded-small justify-center lg:justify-start"
+        >
           {pathSegments.map((segment, index) => {
             let path;
             if (index === 0) {

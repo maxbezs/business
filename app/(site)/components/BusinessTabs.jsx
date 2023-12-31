@@ -54,7 +54,7 @@ const BusinessTabs = ({ content = [], title = "" }) => {
   const trattoriaContent = contentMap[activeTab + " " + title] || [];
 
   return (
-    <div className="">
+    <div className="pb-8">
       <div className="flex justify-center mb-4 ">
         <div className="w-fit bg-neutral-900 rounded-xl	 p-1	">
           {tabs.map((tabType, index) => (
@@ -73,7 +73,7 @@ const BusinessTabs = ({ content = [], title = "" }) => {
         </div>
       </div>
       <div className="flex">
-        <div className="w-3/4">
+        <div className="w-full lg:w-3/4">
           {trattoriaContent.map((block, index) => (
             <ContentBlock key={index} block={block} />
           ))}
