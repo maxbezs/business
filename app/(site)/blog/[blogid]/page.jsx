@@ -155,7 +155,7 @@ export default async function page({ params }) {
           ))}
         </div>
         <H2>
-          Transform Your Business Dreams <br /> Into Tomorrow's Success Today
+          Transform Your Business Dreams <br /> Into Tomorrow Success Today
         </H2>
         <Paragraph>
           With max_bezs Business, empower your vision with cutting-edge

@@ -209,6 +209,12 @@ const Pracing = () => {
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
             Fully tailored for your business
           </p>
+          <a
+            className="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-medium outline-2 outline-offset-2 transition-colors border border-transparent bg-neutral-800 dark:bg-transparent text-white hover:bg-background-dark dark:border dark:border-white/10 dark:hover:border-white/20 mt-6"
+            href="/contact-us"
+          >
+            Contact us
+          </a>
           <div className="order-last mt-6">
             <ul
               role="list"
@@ -234,12 +240,6 @@ const Pracing = () => {
               </li>
             </ul>
           </div>
-          <a
-            className="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-medium outline-2 outline-offset-2 transition-colors border border-transparent bg-neutral-800 dark:bg-transparent text-white hover:bg-background-dark dark:border dark:border-white/10 dark:hover:border-white/20 mt-6"
-            href="/enterprise"
-          >
-            Contact us
-          </a>
         </section>
       </div>
       <div className=" max-w-xl mx-auto px-8 my-8">
