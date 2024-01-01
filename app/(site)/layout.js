@@ -3,6 +3,7 @@ import CustomFont from "next/font/local";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const cfont = CustomFont({
   src: "../../public/e-Ukraine-Regular.otf",
@@ -21,6 +22,8 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Analytics />
+        <SpeedInsights />
+
         <Footer />
       </body>
     </html>
