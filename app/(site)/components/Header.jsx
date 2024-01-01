@@ -20,7 +20,6 @@ const Header = () => {
   useEffect(() => {
     const handleUrlChange = () => {
       setActivePath(location);
-      console.log(location);
     };
 
     handleUrlChange();
