@@ -15,7 +15,7 @@ const Footer = () => {
             />
           </a>
           <div className="flex flex-1 space-x-4 sm:items-end items-center">
-            <a target="_blank" href="https://x.com/mintlify">
+            <a target="_blank" href="https://x.com/">
               <svg
                 width="16"
                 height="16"
@@ -28,7 +28,7 @@ const Footer = () => {
               </svg>
             </a>
             <div className="w-px h-4 bg-gray-100 dark:bg-white/10"></div>
-            <a target="_blank" href="https://github.com/mintlify">
+            <a target="_blank" href="https://github.com/">
               <svg
                 width="19"
                 height="18"
@@ -45,7 +45,7 @@ const Footer = () => {
               </svg>
             </a>
             <div className="w-px h-4 bg-gray-100 dark:bg-white/10"></div>
-            <a target="_blank" href="/community">
+            <a target="_blank" href="/">
               <svg
                 width="16"
                 height="16"

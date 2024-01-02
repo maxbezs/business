@@ -17,7 +17,7 @@ export default async function Scope({ params }) {
     return 0; // No change in order if both have content or both don't have content
   });
   return (
-    <div className="w-10/12 mx-auto pt-16">
+    <div className="w-10/12 mx-auto pt-8 lg:pt-16">
       <H1>{scope.title}</H1>
       <Breadcrumbs />
       <div className="flex gap-6 pt-4">

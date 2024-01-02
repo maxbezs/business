@@ -43,6 +43,23 @@ const blogBlock = {
       type: "image",
     },
     {
+      name: "ctaHeading",
+      title: "CTA Heading",
+      type: "string",
+    },
+    {
+      name: "ctaParagraph",
+      title: "CTA Paragraph",
+      type: "string",
+      validation: (Rule) =>
+        Rule.max(200).warning(`A title shouldn't be more than 120 characters.`),
+    },
+    {
+      name: "ctaButtonText",
+      title: "CTA Button Text",
+      type: "string",
+    },
+    {
       name: "content",
       type: "array",
       title: "Content",

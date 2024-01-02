@@ -121,6 +121,14 @@ const Header = () => {
                 Contact
               </Link>
             </li>
+            <li
+              className="w-fit mx-auto"
+              onClick={isSidebarOpen ? toggleSidebar : null}
+            >
+              <Button styles="block md:hidden " href="/pricing">
+                Get Started
+              </Button>
+            </li>
           </ul>
 
           {isSidebarOpen && (

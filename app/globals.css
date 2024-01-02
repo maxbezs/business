@@ -25,6 +25,37 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0.15em solid;
+  border-radius: 50%;
+  display: grid;
+  height: 1.15em;
+  place-content: center;
+  -webkit-transform: translateY(-0.075em);
+  transform: translateY(-0.075em);
+  width: 1.15em;
+  margin: 3px;
+}
+input[type="checkbox"]:checked:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+input[type="checkbox"]:before {
+  border-radius: 50%;
+  box-shadow: inset 1em 1em #fff;
+  content: "";
+  height: 0.65em;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: -webkit-transform 0.12s ease-in-out;
+  transition: transform 0.12s ease-in-out;
+  transition:
+    transform 0.12s ease-in-out,
+    -webkit-transform 0.12s ease-in-out;
+  width: 0.65em;
+}
 ::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0);
   width: 16px;

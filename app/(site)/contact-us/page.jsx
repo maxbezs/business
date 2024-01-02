@@ -6,7 +6,7 @@ import Form from "../components/Form";
 const ContactUs = () => {
   return (
     <div className="text-center flex flex-col w-full">
-      <div className="flex flex-col w-full items-center justify-center pt-[10vh]">
+      <div className="flex flex-col w-full items-center justify-center pt-8">
         <H1>The last step to expand your business</H1>
         <Paragraph>Shedule a meeting. We are ready to chat!</Paragraph>
       </div>

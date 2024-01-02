@@ -4,6 +4,7 @@ import { ScheduleMeeting } from "react-schedule-meeting";
 import FormInput from "./FormInput";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import H2 from "./H2";
 
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -101,8 +102,8 @@ const Form = () => {
   };
 
   return (
-    <form className="flex w-full" onSubmit={sendEmail}>
-      <div className="flex w-1/2">
+    <form className="flex w-full flex-col lg:flex-row" onSubmit={sendEmail}>
+      <div className="flex w-full lg:w-1/2">
         <ScheduleMeeting
           borderRadius={8}
           backgroundColor="#151515"
@@ -115,7 +116,7 @@ const Form = () => {
           eventStartTimeSpreadInMinutes={10}
         />
       </div>
-      <div className="p-2 w-1/2">
+      <div className="p-2 w-full lg:w-1/2">
         <div className="items-start flex flex-col gap-4 justify-start">
           <FormInput
             label="Name"
@@ -144,25 +145,28 @@ const Form = () => {
             }
             maxLength={200}
           />
-          <div className="flex flex-row flex-wrap gap-4 w-full">
-            {Object.entries(formData.options).map(([key, value]) => (
-              <div
-                className="bg-neutral-900 rounded-md flex p-4 text-left"
-                key={key}
-              >
-                <label className="flex items-center	" htmlFor={key}>
-                  <input
-                    className="w-4 h-4 border-2 border-gray-500 rounded-full grid place-items-center -translate-y-1"
-                    type="checkbox"
-                    name={key}
-                    id={key}
-                    checked={value[0]}
-                    onChange={() => handleCheckboxChange(key)}
-                  />
-                  {value[1]}
-                </label>
-              </div>
-            ))}
+          <div>
+            <H2 styles="text-left">Topics to discuss:</H2>
+            <div className="flex flex-row flex-wrap gap-4 w-full">
+              {Object.entries(formData.options).map(([key, value]) => (
+                <div
+                  className="bg-neutral-900 rounded-md flex p-4 text-left"
+                  key={key}
+                >
+                  <label className="flex items-center	" htmlFor={key}>
+                    <input
+                      className="w-4 h-4 border-2 border-gray-500 rounded-full grid place-items-center -translate-y-1"
+                      type="checkbox"
+                      name={key}
+                      id={key}
+                      checked={value[0]}
+                      onChange={() => handleCheckboxChange(key)}
+                    />
+                    {value[1]}
+                  </label>
+                </div>
+              ))}
+            </div>
           </div>
           <button
             type="submit"

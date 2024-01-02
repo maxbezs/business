@@ -7,7 +7,7 @@ const FormInput = ({
   maxLength,
 }) => (
   <div className="flex relative w-full">
-    <span className="bg-neutral-800 text-white p-3 text-left transition-all duration-300 w-[10%] rounded-s-lg">
+    <span className="bg-neutral-800 text-white p-3 text-left transition-all duration-300 w-24 lg:w-[10%] rounded-s-lg">
       {label}:
     </span>
     <input

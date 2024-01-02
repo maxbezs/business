@@ -65,10 +65,10 @@ const ContentBlock = ({ block }) => {
 export default async function page({ params }) {
   const blog = await getBlog("blog/" + params.blogid);
   const exploreBlogs = await getExploreBlogs();
-  function calculateReadingTime(jsonData) {
-    const wordsPerMinute = 275; // Average reading speed
-    let text = "";
 
+  function calculateReadingTime(jsonData) {
+    const wordsPerMinute = 275;
+    let text = "";
     // Function to recursively extract text from content
     function extractText(content) {
       if (Array.isArray(content)) {
@@ -83,14 +83,8 @@ export default async function page({ params }) {
         });
       }
     }
-
-    // Extracting text from the provided JSON data
     extractText(jsonData.content);
-
-    // Count the number of words
     const wordCount = text.split(/\s+/).filter(Boolean).length;
-
-    // Calculate reading time
     const readingTimeMinutes = Math.ceil(wordCount / wordsPerMinute);
     return readingTimeMinutes;
   }
@@ -140,10 +134,15 @@ export default async function page({ params }) {
             <ContentBlock key={index} block={block} />
           ))}
         </div>
+        <div className=" flex flex-col my-12 mx-auto max-w-4xl">
+          <H2>{blog.ctaHeading}</H2>
+          <Paragraph>{blog.ctaParagraph}</Paragraph>
+          <Button href="/pricing">{blog.ctaButtonText} </Button>
+        </div>
       </div>
-      <div className="mt-12 max-w-6xl mx-auto">
+      <div className="mt-12 max-w-6xl mx-auto px-8 lg:px-0">
         <H2>Explore More</H2>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14 ">
+        <div className="my-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
           {exploreBlogs.map((block) => (
             <BlogBlock
               key={block.slug}
@@ -156,15 +155,6 @@ export default async function page({ params }) {
             />
           ))}
         </div>
-        <H2>
-          Transform Your Business Dreams <br /> Into Tomorrow Success Today
-        </H2>
-        <Paragraph>
-          With max_bezs Business, empower your vision with cutting-edge
-          solutions. Our innovative approach uniquely tackles your business
-          challenges and propel you ahead.
-        </Paragraph>
-        <Button href="/contact-us"> Get Started</Button>
       </div>
     </div>
   );

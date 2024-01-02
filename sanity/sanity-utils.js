@@ -84,6 +84,9 @@ export async function getBlog(slug) {
   return createClient(clientConfig).fetch(
     groq`*[_type == "blogBlock" && slug.current == $slug][0]{
       heading,
+      ctaHeading,
+    ctaParagraph,
+    ctaButtonText,
       _createdAt,
     _updatedAt,
       "poster": poster.asset->url,
