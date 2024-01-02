@@ -41,9 +41,7 @@ const SearchBar = ({ categories }) => {
           ))}
         </div>
       ) : (
-        {
-          /*<p>No Matching Business</p>*/
-        }
+        <p>No Matching Business</p>
       )}
     </>
   );
