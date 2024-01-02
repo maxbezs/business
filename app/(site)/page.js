@@ -1,4 +1,3 @@
-"use client";
 import { getScopes } from "@/sanity/sanity-utils";
 import H1 from "./components/H1";
 import SearchBar from "./components/SearchBar";

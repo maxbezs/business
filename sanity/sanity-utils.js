@@ -10,7 +10,7 @@ export async function getScopes() {
     buttonText,
     slug
   }`,
-    { cache: "no-store" }
+    { next: { revalidate: 60 } }
   );
 }
 
