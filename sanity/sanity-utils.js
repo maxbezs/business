@@ -2,13 +2,16 @@ import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
 
 export async function getScopes() {
-  return createClient(clientConfig).fetch(groq`*[_type == "scope"]{
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "scope"]{
     industry,
     heading,
     paragraph,
     buttonText,
     slug
-  }`);
+  }`,
+    { cache: "no-store" }
+  );
 }
 
 export async function getScope(slug) {
