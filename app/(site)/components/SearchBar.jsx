@@ -41,17 +41,17 @@ const SearchBar = ({ categories }) => {
           ))}
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center border border-neutral-800 rounded-lg max-w-3xl mx-auto p-24 lg:p-36">
+        <div className="flex flex-col text-center items-center justify-center border border-neutral-800 rounded-lg max-w-3xl mx-auto p-24 lg:p-36">
           <div className="border  border-neutral-800  rounded-full w-[70px] h-[70px] mb-6 relative flex items-center justify-center ">
             <svg
-              className="shape-rendering-crisp flex-shrink-0 text-[#444] w-[24px] h-[24px]"
+              className="flex-shrink-0 text-[#444] w-[24px] h-[24px]"
               fill="none"
               height="24"
-              shape-rendering="geometricPrecision"
+              shapeRendering="geometricPrecision"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
               viewBox="0 0 24 24"
               width="24"
             >
@@ -63,11 +63,11 @@ const SearchBar = ({ categories }) => {
                 data-testid="geist-icon"
                 fill="none"
                 height="16"
-                shape-rendering="geometricPrecision"
+                shapeRendering="geometricPrecision"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
                 viewBox="0 0 24 24"
                 width="16"
               >
