@@ -1,16 +1,26 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CategoryBlock from "./CategoryBlock";
 import Search from "./Search";
+import { getScopes } from "@/sanity/sanity-utils";
 
-const SearchBar = ({ categories }) => {
+const SearchBar = () => {
   const [query, setQuery] = useState("");
+  const [categories, setCategories] = useState();
+  useEffect(() => {
+    async function fetchData() {
+      const categories = await getScopes();
+      setCategories(
+        categories.filter(
+          (item) =>
+            item.heading.toLowerCase().includes(query.toLowerCase()) ||
+            item.paragraph.toLowerCase().includes(query.toLowerCase())
+        )
+      );
+    }
+    fetchData();
+  }, [query]);
 
-  const filteredData = categories.filter(
-    (item) =>
-      item.heading.toLowerCase().includes(query.toLowerCase()) ||
-      item.paragraph.toLowerCase().includes(query.toLowerCase())
-  );
   return (
     <>
       <Search>
@@ -27,9 +37,9 @@ const SearchBar = ({ categories }) => {
           onChange={(e) => setQuery(e.target.value)}
         />
       </Search>
-      {filteredData?.length ? (
+      {categories?.length ? (
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-4 mb-20 max-w-6xl mx-auto">
-          {filteredData.map((category, index) => (
+          {categories.map((category, index) => (
             <CategoryBlock
               key={index}
               href={category.slug.current}
