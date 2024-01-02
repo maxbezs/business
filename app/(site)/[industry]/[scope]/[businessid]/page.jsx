@@ -4,6 +4,7 @@ import H1 from "@/app/(site)/components/H1";
 import Paragraph from "@/app/(site)/components/Paragraph";
 import { getContent } from "@/sanity/sanity-utils";
 import React from "react";
+export const revalidate = 0;
 
 export default async function CategoryPage({ params }) {
   const scope = await getContent(params.businessid);

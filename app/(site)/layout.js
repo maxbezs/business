@@ -14,7 +14,6 @@ export const metadata = {
   title: "max_bezs business",
   description: "ALL in ONE solution for ALL Businesses",
 };
-export const revalidate = 0;
 
 export default function RootLayout({ children }) {
   return (

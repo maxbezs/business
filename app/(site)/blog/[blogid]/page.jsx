@@ -9,6 +9,8 @@ import H2 from "../../components/H2";
 import H3 from "../../components/H3";
 import Time from "../../components/Time";
 import BlogBlock from "../../components/BlogBlock";
+export const revalidate = 0;
+
 const TextElement = ({ child, markDefs }) => {
   const linkDef = markDefs.find((def) => child.marks.includes(def._key));
   return linkDef ? (

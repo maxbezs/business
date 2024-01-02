@@ -4,6 +4,7 @@ import Section from "@/app/(site)/components/Section";
 import Sidebar from "@/app/(site)/components/Sidebar";
 import { getPage } from "@/sanity/sanity-utils";
 import React from "react";
+export const revalidate = 0;
 
 export default async function Scope({ params }) {
   const scope = await getPage(params.industry + "/" + params.scope);

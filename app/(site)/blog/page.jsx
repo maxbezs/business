@@ -1,6 +1,8 @@
 import React from "react";
 import BlogBlock from "../components/BlogBlock";
 import { getBlogs } from "@/sanity/sanity-utils";
+export const revalidate = 0;
+
 export default async function Blog() {
   const blogs = await getBlogs();
   const highlightedBlogs = blogs.filter((blog) => blog.highlighted);
