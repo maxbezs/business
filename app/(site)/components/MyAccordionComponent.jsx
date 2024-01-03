@@ -1,17 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function MyAccordionComponent({ answer, question }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="m-full my-5">
-      <div id="faq__question">
+      <div>
         <button
+          id="faq__question"
           className={` focus:outline-none  flex w-full items-center justify-between first:rounded-t-md last:rounded-b-md py-5 px-5 text-left font-medium  border-neutral-800  border ${
             isOpen
               ? "bg-neutral-900 border-b border-gray-200"
-              : "bg-neutral-950 hover:drop-shadow-[0_0px_4px_rgba(256,256,256,0.78)] drop-shadow-[0_0px_1px_rgba(256,256,256,0.78)]"
+              : "bg-neutral-950 rounded-b-md hover:drop-shadow-[0_0px_4px_rgba(256,256,256,0.78)] drop-shadow-[0_0px_1px_rgba(256,256,256,0.78)]"
           }`}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -56,11 +57,11 @@ function MyAccordionComponent({ answer, question }) {
             )}
           </span>
         </button>
-        {isOpen && (
+        <div id="faq__answer" className={` ${isOpen ? "visible" : "hidden"}`}>
           <div className=" rounded-b-md p-5 border border-white/[0.15]">
             <p className="mb-2 ">{answer}</p>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

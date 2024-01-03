@@ -59,6 +59,7 @@ const blogBlock = {
       title: "CTA Button Text",
       type: "string",
     },
+
     {
       name: "content",
       type: "array",

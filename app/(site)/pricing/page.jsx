@@ -1,9 +1,13 @@
-import React from "react";
 import TickMark from "../components/TickMark";
 import MyAccordionComponent from "../components/MyAccordionComponent";
 import H2 from "../components/H2";
+import ServicesTabs from "../components/ServicesTabs";
+import { getFaq } from "@/sanity/sanity-utils";
+export const revalidate = 0;
 
-const Pracing = () => {
+export default async function Pricing() {
+  const faq = await getFaq();
+
   return (
     <div className="my-8 ">
       <div className="text-center mx-6 ">
@@ -251,11 +255,11 @@ const Pracing = () => {
             <svg
               fill="none"
               height="24"
-              shape-rendering="geometricPrecision"
+              shapeRendering="geometricPrecision"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
               viewBox="0 0 24 24"
               width="24"
               className="w-auto h-12"
@@ -271,11 +275,11 @@ const Pracing = () => {
             <svg
               fill="none"
               height="24"
-              shape-rendering="geometricPrecision"
+              shapeRendering="geometricPrecision"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
               viewBox="0 0 24 24"
               width="24"
               className="w-auto h-12"
@@ -291,11 +295,11 @@ const Pracing = () => {
               className="w-auto h-12"
               fill="none"
               height="24"
-              shape-rendering="geometricPrecision"
+              shapeRendering="geometricPrecision"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
               viewBox="0 0 24 24"
               width="24"
             >
@@ -309,153 +313,19 @@ const Pracing = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-3xl mx-auto my-8 px-8 lg:px-0">
-        <H2 styles="text-center ">We build anything for Your business:</H2>
-        <div>
-          <div className="flex gap-2 my-6">
-            <div className="bg-white w-fit text-black rounded-full px-3 py-1 ">
-              Popular
-            </div>
-            <div className="bg-neutral-950 border-neutral-800 border rounded-full px-3 py-1 ">
-              Hospitality
-            </div>
-            <div className="bg-neutral-950 border-neutral-800 border rounded-full px-3 py-1 ">
-              Finance
-            </div>
-          </div>
-          <div className="mx-auto max-w-4xl overflow-hidden border-neutral-800 border rounded-md grid grid-cols-3   ">
-            <div className="flex flex-col border-r-neutral-800  border-r last:border-none">
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Website</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Mobile app</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Logos &amp; branding</div>
-              </div>
-
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>SAAS</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Wireframes</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Stationery</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Pitch decks</div>
-              </div>
-            </div>
-            <div className="flex flex-col border-r-neutral-800  border-r last:border-none">
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Slide decks</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Direct mail</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Infographics</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Brochures</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Signage</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Brand guides</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Social media graphics</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Billboards</div>
-              </div>
-            </div>
-            <div className="flex flex-col border-r-neutral-800  border-r last:border-none">
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Trade show banners</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Email graphics</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Resumes</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Business cards</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Packaging</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Blog graphics</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Digital ads</div>
-              </div>
-              <div className=" p-4 bg-neutral-950 border-b border-b-neutral-800 last:border-none">
-                <div>Icons</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServicesTabs />
       <div className=" max-w-xl mx-auto px-8 my-8">
         <H2 styles="mx-auto w-fit">FAQs</H2>
         <div id="faq">
-          <MyAccordionComponent
-            question="Why wouldn't I just hire a full-time developer?"
-            answer={`Good question! For starters, the annual cost of a full-time middle-level web developer now exceeds $80,000 + benefits (and good luck finding one available). Aside from that, you may not always have enough work to keep them busy at all times, so you're stuck paying for time you aren't able to utilize.s With the monthly plan, you can pause and resume your subscription as often as you need to ensure you're only paying your developer when you have work available for them.`}
-          />
-          <MyAccordionComponent
-            question="Is there a limit to how many requests I can have?"
-            answer="Once subscribed, you're able to add as many code requests to your queue as you'd like, and they will be delivered one by one."
-          />
-          <MyAccordionComponent
-            question="How fast will I see my web app/webpage online?"
-            answer="On average, most requests are completed in just two days or less. However, more complex requests can take longer."
-          />
-          <MyAccordionComponent
-            question="Who are the developers?"
-            answer="Experienced devs with live mission to become better everyday, people who ready to push past the limits of code and human capabilities. The mindset of each devs is to provide the best possible result to make the best possible business."
-          />
-          <MyAccordionComponent
-            question="How does the pause feature work?"
-            answer="We understand you may not have enough coding work to fill up entire month. Perhaps you only have one or two coding requests at the moment. That's where pausing your subscription comes in handy.
-
-          Billing cycles are based on 30 day period. Let's say you sign up and use the service for 20 days, and then decide to pause your subscription. This means that the billing cycle will be paused and you'll have 10 days of service remaining to be used anytime in the future."
-          />
-          <MyAccordionComponent
-            question="How do I request tasks?"
-            answer="We offers a ton of flexibility in how you request designs using Trello. Some common ways clients request task is directly via Trello, sharing Google docs or wireframes, or even recording a brief Loom video (for those who prefer not to write their briefs out). Basically, if it can be linked to or shared in Trello, it's fair game."
-          />
-          <MyAccordionComponent
-            question="What if I don't like the result?"
-            answer="No worries! We'll continue to revise the result until you're 100% satisfied."
-          />
-          <MyAccordionComponent
-            question="What if I only have a single request?"
-            answer="That's fine. You can pause your subscription when finished and return  when you have additional tasks. There's no need to let the remainder of your subscription go to waste."
-          />
-          <MyAccordionComponent
-            question="Are there any refunds if I don't like the service?"
-            answer="Due to the high quality nature of the work, there will be no refunds issued."
-          />
-          <MyAccordionComponent
-            question="Is there any tasks you don't cover?"
-            answer="Absolutely. We do not cover the following tasks:"
-          />
-          <MyAccordionComponent
-            question="What programs do you code in?"
-            answer="Most requests are coded using React.js."
-          />
+          {faq.map((block) => (
+            <MyAccordionComponent
+              key={block.id}
+              question={block.question}
+              answer={block.answer}
+            />
+          ))}
         </div>
       </div>
     </div>
   );
-};
-
-export default Pracing;
+}

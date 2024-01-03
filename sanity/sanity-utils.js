@@ -101,3 +101,11 @@ export async function getBlog(slug) {
     { slug }
   );
 }
+
+export async function getFaq() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "faq"]{
+      question, answer
+    }`
+  );
+}
