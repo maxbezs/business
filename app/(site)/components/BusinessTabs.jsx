@@ -42,7 +42,6 @@ const ContentBlock = ({ block }) => {
   return <Paragraph>{renderChildren()}</Paragraph>;
 };
 
-// Main component handling the tab functionality and content rendering.
 const BusinessTabs = ({ content = [], title = "" }) => {
   const [activeTab, setActiveTab] = useState("Middle");
   const tabs = ["Small", "Middle", "Large"];
@@ -55,14 +54,14 @@ const BusinessTabs = ({ content = [], title = "" }) => {
 
   return (
     <div className="pb-8">
-      <div className="flex justify-center mb-4 ">
-        <div className="w-fit bg-neutral-900 rounded-xl	 p-1	">
+      <div className="flex justify-center mb-4">
+        <div className="w-fit bg-neutral-900 rounded-xl p-1">
           {tabs.map((tabType, index) => (
             <button
               key={index}
               className={`px-4 py-2 ${
                 activeTab === tabType
-                  ? "  bg-neutral-700 rounded-lg text-white"
+                  ? "bg-neutral-700 rounded-lg text-white"
                   : "text-neutral-400"
               }`}
               onClick={() => setActiveTab(tabType)}
@@ -74,11 +73,17 @@ const BusinessTabs = ({ content = [], title = "" }) => {
       </div>
       <div className="flex">
         <div className="w-full lg:w-3/4">
-          {trattoriaContent.map((block, index) => (
-            <ContentBlock key={index} block={block} />
+          {tabs.map((tabType, index) => (
+            <div
+              key={index}
+              className={`${activeTab === tabType ? "" : "hidden"}`}
+            >
+              {contentMap[tabType + " " + title]?.map((block, idx) => (
+                <ContentBlock key={idx} block={block} />
+              ))}
+            </div>
           ))}
         </div>
-
         <SidebarGuide tabs={trattoriaContent} />
       </div>
     </div>
