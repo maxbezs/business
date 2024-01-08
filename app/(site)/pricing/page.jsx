@@ -35,9 +35,15 @@ export const metadata = {
 
     images: [
       {
-        url: "https://business.max-bezs.com/listmax.webp", // Must be an absolute URL
+        url: "https://nextjs.org/og.png", // Must be an absolute URL
         width: 800,
         height: 600,
+      },
+      {
+        url: "https://nextjs.org/og-alt.png", // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: "My custom alt",
       },
     ],
     type: "website",
