@@ -31,7 +31,15 @@ export const metadata = {
     description:
       "Discover the perfect pricing plan for your business needs. From solopreneurs to large enterprises, our plans are designed to help you scale efficiently and maximize your business potential. Start your journey towards business success today!",
     url: "https://business.max-bezs.com/pricing",
-    image: "https://business.max-bezs.com/listmax.webp",
+    siteName: "max_bezs Business",
+
+    images: [
+      {
+        url: "https://business.max-bezs.com/listmax.webp", // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+    ],
     type: "website",
   },
 };
