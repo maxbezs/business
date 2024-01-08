@@ -35,14 +35,14 @@ export const metadata = {
 
     images: [
       {
-        url: "https://business.max-bezs.com/listmax.jpg", // Must be an absolute URL
+        url: "https://business.max-bezs.com/star-struck.png", // Must be an absolute URL
         width: 800,
         height: 600,
       },
       {
-        url: "https://nextjs.org/og-alt.png", // Must be an absolute URL
-        width: 1800,
-        height: 1600,
+        url: "https://business.max-bezs.com/star-struck.png", // Must be an absolute URL
+        width: 200,
+        height: 180,
         alt: "My custom alt",
       },
     ],
