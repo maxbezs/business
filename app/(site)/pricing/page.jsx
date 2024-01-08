@@ -35,7 +35,7 @@ export const metadata = {
 
     images: [
       {
-        url: "https://nextjs.org/og.png", // Must be an absolute URL
+        url: "https://business.max-bezs.com/listmax.jpg", // Must be an absolute URL
         width: 800,
         height: 600,
       },
