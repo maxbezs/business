@@ -26,6 +26,11 @@ export const metadata = {
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   charset: "UTF-8",
+  icons: {
+    other: [
+      { rel: "image_src", url: "https://business.max-bezs.com/listmax.jpg" },
+    ],
+  },
   openGraph: {
     title: "Maximize Your Business Potential with Our Tailored Pricing Plans",
     description:
