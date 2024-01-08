@@ -6,35 +6,33 @@ import { getFaq } from "@/sanity/sanity-utils";
 export const revalidate = 0;
 export const metadata = {
   title: "Maximize Your Business Potential with Our Tailored Pricing Plans",
-  meta: {
+  description:
+    "Ready to maximize your business's potential? Our diverse pricing plans are designed to cater to businesses of all sizes, from solopreneurs to large enterprises. Discover how our plans can help you enhance efficiency, drive growth, and achieve scalability. Choose the right plan today and take the first step towards realizing your business dreams.",
+  keywords: [
+    "Business Growth Plans",
+    "Affordable Pricing Models",
+    "Customizable Business Solutions",
+    "Scalability Pricing Options",
+    "Maximize Business Efficiency",
+    "Enterprise Subscription Plans",
+    "Solopreneur-Friendly Pricing",
+    "Business Plan Optimization",
+    "Value-Driven Pricing Strategies",
+    "Efficient Business Scale-Up Plans",
+  ],
+  author: "max_bezs",
+  creator: "max_bezs",
+  publisher: "max_bezs",
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
+  charset: "UTF-8",
+  openGraph: {
+    title: "Maximize Your Business Potential with Our Tailored Pricing Plans",
     description:
-      "Ready to maximize your business's potential? Our diverse pricing plans are designed to cater to businesses of all sizes, from solopreneurs to large enterprises. Discover how our plans can help you enhance efficiency, drive growth, and achieve scalability. Choose the right plan today and take the first step towards realizing your business dreams.",
-    keywords: [
-      "Business Growth Plans",
-      "Affordable Pricing Models",
-      "Customizable Business Solutions",
-      "Scalability Pricing Options",
-      "Maximize Business Efficiency",
-      "Enterprise Subscription Plans",
-      "Solopreneur-Friendly Pricing",
-      "Business Plan Optimization",
-      "Value-Driven Pricing Strategies",
-      "Efficient Business Scale-Up Plans",
-    ],
-    author: "max_bezs",
-    creator: "max_bezs",
-    publisher: "max_bezs",
-    viewport: "width=device-width, initial-scale=1",
-    robots: "index, follow",
-    charset: "UTF-8",
-    og: {
-      title: "Maximize Your Business Potential with Our Tailored Pricing Plans",
-      description:
-        "Discover the perfect pricing plan for your business needs. From solopreneurs to large enterprises, our plans are designed to help you scale efficiently and maximize your business potential. Start your journey towards business success today!",
-      url: "https://business.max-bezs.com/pricing",
-      image: "/listmax.webp",
-      type: "website",
-    },
+      "Discover the perfect pricing plan for your business needs. From solopreneurs to large enterprises, our plans are designed to help you scale efficiently and maximize your business potential. Start your journey towards business success today!",
+    url: "https://business.max-bezs.com/pricing",
+    image: "https://business.max-bezs.com/listmax.webp",
+    type: "website",
   },
 };
 
