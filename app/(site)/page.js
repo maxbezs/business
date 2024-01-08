@@ -2,7 +2,10 @@ import { getScopes } from "@/sanity/sanity-utils";
 import H1 from "./components/H1";
 import SearchBar from "./components/SearchBar";
 export const revalidate = 0;
-
+export const metadata = {
+  title: "...",
+  description: "...",
+};
 export default async function QWERTY() {
   const categories = await getScopes();
   return (
