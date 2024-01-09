@@ -2,7 +2,53 @@ import React from "react";
 import BlogBlock from "../components/BlogBlock";
 import { getBlogs } from "@/sanity/sanity-utils";
 export const revalidate = 0;
+export const metadata = {
+  title: "Insights and Innovations: Explore Our Latest Blog Posts",
+  description:
+    "Dive into our blog for a wealth of knowledge on the latest trends in web and app development, business strategies, and technological innovations. Our expertly crafted articles offer valuable insights, tips, and thought leadership to help you stay ahead in your industry. Whether you're a budding entrepreneur or a seasoned business leader, our blog is your go-to resource for inspiration and practical advice to drive your business forward.",
+  keywords: [
+    "Latest Tech Trends",
+    "Web Development Insights",
+    "Entrepreneurial Strategies",
+    "Innovative Business Solutions",
+    "App Development Tips",
+    "Industry Thought Leadership",
+    "Business Growth Tactics",
+    "Cutting-Edge Technologies",
+    "Expert Advice and Tips",
+    "Success-Driven Blog Posts",
+  ],
+  author: "max_bezs",
+  creator: "max_bezs",
+  publisher: "max_bezs",
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
+  charset: "UTF-8",
+  icons: {
+    other: [
+      {
+        rel: "image_src",
+        url: "https://business.max-bezs.com/listmax.jpg",
+      },
+    ],
+  },
+  openGraph: {
+    title: "Insights and Innovations: Explore Our Latest Blog Posts",
+    description:
+      "Dive into our blog for a wealth of knowledge on the latest trends in web and app development, business strategies, and technological innovations. Our expertly crafted articles offer valuable insights, tips, and thought leadership to help you stay ahead in your industry. Whether you're a budding entrepreneur or a seasoned business leader, our blog is your go-to resource for inspiration and practical advice to drive your business forward.",
+    url: "https://business.max-bezs.com/blog",
+    siteName: "max_bezs Business",
 
+    images: [
+      {
+        url: "https://business.max-bezs.com/listmax.jpg", // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+    ],
+    type: "website",
+  },
+};
 export default async function Blog() {
   const blogs = await getBlogs();
   const highlightedBlogs = blogs.filter((blog) => blog.highlighted);

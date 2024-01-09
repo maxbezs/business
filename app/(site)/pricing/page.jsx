@@ -7,7 +7,7 @@ export const revalidate = 0;
 export const metadata = {
   title: "Maximize Your Business Potential with Our Tailored Pricing Plans",
   description:
-    "Ready to maximize your business's potential? Our diverse pricing plans are designed to cater to businesses of all sizes, from solopreneurs to large enterprises. Discover how our plans can help you enhance efficiency, drive growth, and achieve scalability. Choose the right plan today and take the first step towards realizing your business dreams.",
+    "Discover the perfect pricing plan for your business needs. From solopreneurs to large enterprises, our plans are designed to help you scale efficiently and maximize your business potential. Start your journey towards business success today!",
   keywords: [
     "Business Growth Plans",
     "Affordable Pricing Models",
@@ -30,7 +30,7 @@ export const metadata = {
     other: [
       {
         rel: "image_src",
-        url: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F080b833aa5deb69ea2c9a33c83b6bf76.cdn.bubble.io%2Ff1698860256347x806155895239618400%2F1.JPG?w=&h=&auto=compress&dpr=1&fit=max",
+        url: "https://business.max-bezs.com/listmax.jpg",
       },
     ],
   },
