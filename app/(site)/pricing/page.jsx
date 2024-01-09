@@ -43,12 +43,12 @@ export const metadata = {
 
     images: [
       {
-        url: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F080b833aa5deb69ea2c9a33c83b6bf76.cdn.bubble.io%2Ff1698860256347x806155895239618400%2F1.JPG?w=&h=&auto=compress&dpr=1&fit=max", // Must be an absolute URL
+        url: "https://business.max-bezs.com/listmax.jpg", // Must be an absolute URL
         width: 800,
         height: 600,
       },
       {
-        url: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F080b833aa5deb69ea2c9a33c83b6bf76.cdn.bubble.io%2Ff1698860256347x806155895239618400%2F1.JPG?w=&h=&auto=compress&dpr=1&fit=max", // Must be an absolute URL
+        url: "https://business.max-bezs.com/listmax.jpg", // Must be an absolute URL
         width: 1800,
         height: 1600,
         alt: "My custom alt",
