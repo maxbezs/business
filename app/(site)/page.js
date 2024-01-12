@@ -5,7 +5,7 @@ export const revalidate = 0;
 export const metadata = {
   title: "max_bezs: Your Partner in Digital Excellence and Business Growth",
   description:
-    "max_bezs is dedicated to solving the critical challenges that business owners face in the digital era. Our services, including advanced web and app development, are specifically designed to enhance your digital presence, improve customer engagement, and streamline your operations. With our expertise, you can effortlessly overcome common business obstacles such as low online visibility, inefficient processes, and adapting to new tech trends. Let us help you harness the power of technology to propel your business towards remarkable growth and success.",
+    "Max_bezs: Elevating businesses in the digital age with advanced web/app development, enhanced digital presence, and streamlined operations for growth.",
 };
 export default async function QWERTY() {
   const categories = await getScopes();
