@@ -36,7 +36,7 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
                   width="80"
                   height="80"
                   className="h-10 w-10 rounded-full"
-                  src="/max-bezs-logo-header.png"
+                  src="/business-logo-small.png"
                 />
               </div>
               <div className="text-[14px]">
@@ -69,7 +69,7 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
               width="80"
               height="80"
               className="h-6 w-6 rounded-full"
-              src="/max-bezs-logo-header.png"
+              src="/business-logo-small.png"
             />
             <div className="text-gray-500 dark:text-gray-400 flex items-center text-[14px] space-x-1.5">
               <p className="text-gray-700 dark:text-gray-300">max_bezs</p>

@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="/">
             <Image
               alt="max_bezs logo"
-              src="/max-bezs-logo-header.png"
+              src="/business-logo-small.png"
               width="64"
               height="64"
             />

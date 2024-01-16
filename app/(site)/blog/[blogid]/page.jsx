@@ -109,7 +109,7 @@ export default async function page({ params }) {
         </div>
         <div className=" flex items-center gap-x-4 my-4">
           <Image
-            src="/max-bezs-logo-header.png"
+            src="/business-logo-small.png"
             width="40"
             height="40"
             alt=""
