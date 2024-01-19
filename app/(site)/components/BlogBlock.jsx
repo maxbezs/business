@@ -6,10 +6,7 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
   return (
     <>
       {highlighted ? (
-        <a
-          className="group lg:grid grid-cols-3 gap-x-10"
-          href="/blog/november-2023"
-        >
+        <a className="group lg:grid grid-cols-3 gap-x-10" href={href}>
           <div className="col-span-2 border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden">
             <Image
               alt={heading}
