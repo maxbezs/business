@@ -1,48 +1,96 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
 <url>
-	<loc>https://business.max-bezs.com/</loc>
-	<lastmod>2024-01-20T06:31:26+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://business.max-bezs.com/</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-	<loc>https://business.max-bezs.com/blog</loc>
-	<lastmod>2024-01-20T06:31:26+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://business.max-bezs.com/blog</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://business.max-bezs.com/contact-us</loc>
-	<lastmod>2024-01-20T06:31:26+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://business.max-bezs.com/contact-us</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://business.max-bezs.com/pricing</loc>
-	<lastmod>2024-01-20T06:31:26+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://business.max-bezs.com/pricing</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://business.max-bezs.com/hospitality/food-and-beverages</loc>
-	<lastmod>2024-01-20T06:31:26+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://business.max-bezs.com/blog/how-stripe-creates-the-best-documentation-in-the-tech-industry</loc>
-	<lastmod>2024-01-20T06:31:27+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://business.max-bezs.com/blog/how-stripe-creates-the-best-documentation-in-the-tech-industry</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://business.max-bezs.com/blog/wow-test-heading</loc>
-	<lastmod>2024-01-20T06:31:27+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://business.max-bezs.com/blog/wow-test-heading</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://business.max-bezs.com/blog/how-we-design-at-mintlify</loc>
-	<lastmod>2024-01-20T06:31:27+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://business.max-bezs.com/blog/how-we-design-at-mintlify</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://business.max-bezs.com/hospitality/food-and-beverages/italian-trattoria</loc>
-	<lastmod>2024-01-20T06:31:31+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages/italian-trattoria</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages/chinese-restaurant</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages/indian-restaurant</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages/american-diner</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages/french-bistro</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages/japanese-sushi-restaurant</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages/mexican-restaurant</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages/thai-restaurant</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://business.max-bezs.com/hospitality/food-and-beverages/mediterranean-restaurant</loc>
+  <lastmod>2024-02-08T06:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
