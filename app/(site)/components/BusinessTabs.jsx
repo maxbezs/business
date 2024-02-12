@@ -42,7 +42,7 @@ const ContentBlock = ({ block }) => {
   return <Paragraph>{renderChildren()}</Paragraph>;
 };
 
-const BusinessTabs = ({ content = [], title = "" }) => {
+const BusinessTabs = ({ content, title }) => {
   const [activeTab, setActiveTab] = useState("Middle");
   const tabs = ["Small", "Middle", "Large"];
   const contentMap = content.reduce((acc, item) => {
