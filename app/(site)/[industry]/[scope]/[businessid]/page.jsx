@@ -11,13 +11,13 @@ export default async function CategoryPage({ params }) {
   return (
     <div className="mx-auto max-w-6xl w-10/12 pt-16">
       <H1 styles="text-center lg:leading-[72px] leading-base ">
-        Professional Technology Solutions for {scope?.title} Businesses
+        Professional Technology Solutions for {scope.title} Businesses
       </H1>
       <div className="flex justify-center w-full">
         <Breadcrumbs />
       </div>
       <Paragraph className="text-center">
-        Choose how big your {scope?.title} business is:
+        Choose how big your {scope.title} business is:
       </Paragraph>
       <BusinessTabs content={scope.content} title={scope.title} />
     </div>
