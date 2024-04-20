@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Button = ({ className, href, children, variant }) => {
+const Button = ({ className = "", href, children, variant }) => {
   let buttonClassName =
     "font-cfont align-baseline rounded-lg cursor-pointer select-none py-3 px-4 no-underline w-fit ";
 

@@ -1,4 +1,4 @@
-const H1 = ({ className, children }) => {
+const H1 = ({ className = "", children }) => {
   return (
     <h1
       className={

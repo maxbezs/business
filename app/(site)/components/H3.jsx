@@ -1,4 +1,4 @@
-const H3 = ({ className, id, children }) => {
+const H3 = ({ className = "", id, children }) => {
   return (
     <h3
       id={id}

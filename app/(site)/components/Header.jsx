@@ -125,9 +125,7 @@ const Header = () => {
               className="w-fit mx-auto block md:hidden "
               onClick={isSidebarOpen ? toggleSidebar : null}
             >
-              <Button href="/pricing">
-                Get Started
-              </Button>
+              <Button href="/pricing">Get Solution</Button>
             </li>
           </ul>
 
@@ -154,7 +152,7 @@ const Header = () => {
           )}
         </nav>
         <Button className="hidden md:block " href="/pricing">
-          Get Started
+          Get Solution
         </Button>
       </div>
     </header>

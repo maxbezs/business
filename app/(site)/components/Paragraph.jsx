@@ -1,4 +1,4 @@
-const Paragraph = ({ className, children, dangerouslySetInnerHTML }) => {
+const Paragraph = ({ className = "", children, dangerouslySetInnerHTML }) => {
   return (
     <p
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
