@@ -8,6 +8,7 @@ import SectorCard from "./components/SectorCard";
 import StepComponent from "./components/StepComponent";
 import CardLatest from "./components/CardLatest";
 import { cardsData, sectorsData, steps, latest } from "./landing-data";
+import H3 from "./components/H3";
 export const revalidate = 0;
 export const metadata = {
   title: "max_bezs: Your Partner in Digital Excellence and Business Growth",
@@ -120,9 +121,8 @@ export default async function Home() {
                 className="w-full h-20 sm:h-[13rem] group-hover:scale-105 transition"
               />
             </div>
-            <h1 className="mt-5 text-gray-900 dark:text-gray-100 text-lg text-center">
-              Something else?
-            </h1>
+            <H3 className="mt-5">Something else?</H3>
+
             <h2 className="mt-3 text-gray-500 dark:text-gray-400 text-[14px] leading-relaxed text-center mb-4">
               Discover limitless possibilities. Take your business to new
               heights with a subscription or by scheduling a meeting{" "}

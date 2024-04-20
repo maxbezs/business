@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import H3 from "./H3";
+
 const CardLatest = ({ alt, src, title, description }) => (
   <div className="group">
     <div className="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden">
@@ -11,7 +13,7 @@ const CardLatest = ({ alt, src, title, description }) => (
         src={src}
       />
     </div>
-    <h1 className="mt-5 text-gray-900 dark:text-gray-100 text-lg">{title}</h1>
+    <H3 className="mt-5">{title}</H3>
     <h2 className="mt-3 text-gray-500 dark:text-gray-400 text-[14px] leading-relaxed">
       {description}
     </h2>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Time from "./Time";
+import H3 from "./H3";
 
 function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
   return (
@@ -54,9 +55,8 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
               src={poster}
             />
           </div>
-          <h1 className="mt-5 text-gray-900 dark:text-gray-100 text-lg">
-            {heading}
-          </h1>
+          <H3 className="mt-5">{heading}</H3>
+
           <h2 className="mt-3 text-gray-500 dark:text-gray-400 text-[14px] leading-relaxed">
             {paragraph}
           </h2>
