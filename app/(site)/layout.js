@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const cfont = CustomFont({
-  src: "../../public/e-Ukraine-Regular.otf",
+  src: "../../public/font/e-Ukraine-Regular.otf",
   variable: "--font-cfont",
 });
 

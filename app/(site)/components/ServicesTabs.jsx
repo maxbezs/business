@@ -7,7 +7,7 @@ const ServicesTabs = () => {
   const [activeTab, setActiveTab] = useState("Popular");
   return (
     <div className="max-w-3xl mx-auto my-8 px-8 lg:px-0">
-      <H2 styles="text-center ">We build anything for Your business:</H2>
+      <H2 className="text-center ">We build anything for Your business:</H2>
       <div>
         <div className="flex gap-2 my-6">
           {tabs.map((tabType, index) => (

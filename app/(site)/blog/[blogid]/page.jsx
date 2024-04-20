@@ -102,7 +102,7 @@ export default async function page({ params }) {
           </Link>
         </div>
 
-        <H1 styles="leading-none		">{blog.heading}</H1>
+        <H1 className="leading-none		">{blog.heading}</H1>
         <div className="flex gap-x-1">
           <Time dateTime={comparedTimes(blog._createdAt, blog._updatedAt)} />
           <p>• {calculateReadingTime(blog)} minutes read</p>

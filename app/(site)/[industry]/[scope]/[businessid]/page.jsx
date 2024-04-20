@@ -10,7 +10,7 @@ export default async function CategoryPage({ params }) {
   const scope = await getContent(params.businessid);
   return (
     <div className="mx-auto max-w-6xl w-10/12 pt-16">
-      <H1 styles="text-center lg:leading-[72px] leading-base ">
+      <H1 className="text-center lg:leading-[72px] leading-base ">
         Professional Technology Solutions for {scope.title} Businesses
       </H1>
       <div className="flex justify-center w-full">

@@ -122,10 +122,10 @@ const Header = () => {
               </Link>
             </li>
             <li
-              className="w-fit mx-auto"
+              className="w-fit mx-auto block md:hidden "
               onClick={isSidebarOpen ? toggleSidebar : null}
             >
-              <Button styles="block md:hidden " href="/pricing">
+              <Button href="/pricing">
                 Get Started
               </Button>
             </li>
@@ -153,7 +153,7 @@ const Header = () => {
             </button>
           )}
         </nav>
-        <Button styles="hidden md:block " href="/pricing">
+        <Button className="hidden md:block " href="/pricing">
           Get Started
         </Button>
       </div>

@@ -146,7 +146,7 @@ const Form = () => {
             maxLength={200}
           />
           <div>
-            <H2 styles="text-left">Topics to discuss:</H2>
+            <H2 className="text-left">Topics to discuss:</H2>
             <div className="flex flex-row flex-wrap gap-4 w-full">
               {Object.entries(formData.options).map(([key, value]) => (
                 <div

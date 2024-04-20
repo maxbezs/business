@@ -300,7 +300,7 @@ export default async function Pricing() {
         </section>
       </div>
       <div className="max-w-5xl mx-auto my-8 px-8 lg:px-0">
-        <H2 styles="text-center ">
+        <H2 className="text-center ">
           So easy to use, simple as it is. How does it work?
         </H2>
         <div className="grid  grid-cols-1 lg:grid-cols-3 gap-3">
@@ -368,7 +368,7 @@ export default async function Pricing() {
       </div>
       <ServicesTabs />
       <div className=" max-w-xl mx-auto px-8 my-8">
-        <H2 styles="mx-auto w-fit">FAQs</H2>
+        <H2 className="mx-auto w-fit">FAQs</H2>
         <div id="faq">
           {faq.map((block) => (
             <MyAccordionComponent
