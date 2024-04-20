@@ -30,7 +30,7 @@ export default async function Home() {
         <div className="w-full px-4 pt-20 lg:p-20 flex flex-col gap-4 text-center ">
           <div>
             <Paragraph>Boost Your Business with Tailored Solutions🚀</Paragraph>
-            <H1 className="w-5/6 max-w-4xl mx-auto">
+            <H1 className="w-full max-w-4xl mx-auto">
               Achieve Unprecedented Success in Hospitality, Retail, and Service
             </H1>
           </div>
