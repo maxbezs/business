@@ -18,22 +18,33 @@ export const metadata = {
 export default async function Home() {
   return (
     <div className=" mx-auto max-w-7xl">
-      <div className="w-full px-4 py-8 lg:p-20 flex flex-col gap-4 text-center">
-        <div>
-          <Paragraph>Boost Your Business with Tailored Solutions🚀</Paragraph>
-          <H1 className="max-w-4xl mx-auto">
-            Achieve Unprecedented Success in Hospitality, Retail, and Service
-          </H1>
-        </div>
+      <div className="relative max-h-screen h-[500px] sm:h-[700px]">
+        <Image
+          alt="maximize"
+          src={"/background.png"}
+          quality={100}
+          className="-z-10 block absolute bottom-0  "
+          width={1600}
+          height={800}
+        />
+        <div className="w-full px-4 pt-20 lg:p-20 flex flex-col gap-4 text-center ">
+          <div>
+            <Paragraph>Boost Your Business with Tailored Solutions🚀</Paragraph>
+            <H1 className="w-5/6 max-w-4xl mx-auto">
+              Achieve Unprecedented Success in Hospitality, Retail, and Service
+            </H1>
+          </div>
 
-        <div className="flex gap-4 mx-auto">
-          <Button href={"/pricing"}>Get Solution</Button>
-          <Button variant="outline" href={"/contact-us"}>
-            Schedule meeting
-          </Button>
+          <div className="flex gap-4 mx-auto">
+            <Button href={"/pricing"}>Get Solution</Button>
+            <Button variant="outline" href={"/contact-us"}>
+              Schedule meeting
+            </Button>
+          </div>
         </div>
       </div>
-      <div className=" flex flex-col items-center px-4 lg:px-0">
+
+      <div className=" flex flex-col items-center px-4 pt-20 lg:px-0">
         <H2>Plan benefits</H2>
         <Paragraph className={"text-center max-w-xl"}>
           Say goodbye to tech headaches. Simply submit request and focus on what
