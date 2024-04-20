@@ -107,7 +107,7 @@ const Form = () => {
         <ScheduleMeeting
           borderRadius={8}
           backgroundColor="#151515"
-          primaryColor="#232323"
+          primaryColor="#fff"
           eventDurationInMinutes={10}
           availableTimeslots={availableTimeslots}
           onStartTimeSelect={(e) =>
