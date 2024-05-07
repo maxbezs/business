@@ -62,23 +62,6 @@ export default async function Home() {
           ))}
         </div>
       </div>
-      <div className="px-4 lg:py-8 ">
-        <H2 className="text-center max-w-4xl mx-auto">
-          Enhance Your Business with Specialized <br />
-          <span className="italic">Step-by-step Guidance</span>
-        </H2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10  mx-auto my-8">
-          {sectorsData.map((sector, index) => (
-            <SectorCard
-              icon={sector.icon}
-              title={sector.title}
-              subtitle={sector.subtitle}
-              desc={sector.description}
-              key={index}
-            />
-          ))}
-        </div>
-      </div>
       <div className="px-4 lg:py-8">
         <H2>Let's start here: </H2>
         <Paragraph className={"max-w-2xl"}>
@@ -98,6 +81,24 @@ export default async function Home() {
           />
         ))}
       </div>
+      <div className="px-4 lg:py-8 ">
+        <H2 className="text-center max-w-4xl mx-auto">
+          Enhance Your Business with Specialized <br />
+          <span className="italic">Step-by-step Guidance</span>
+        </H2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10  mx-auto my-8">
+          {sectorsData.map((sector, index) => (
+            <SectorCard
+              icon={sector.icon}
+              title={sector.title}
+              subtitle={sector.subtitle}
+              desc={sector.description}
+              key={index}
+            />
+          ))}
+        </div>
+      </div>
+
       <div className="px-4 lg:px-0 py-8">
         <div className="mx-auto max-w-lg text-center">
           <H2>Latest solutions</H2>
