@@ -10,28 +10,50 @@ export async function POST(request) {
 
     switch (body.emailType) {
       case "subscribed":
-        console.log("SUBSCRIBED: ", body);
-        const ffff = resend.emails.send({
-          from: "Max <max-bezs@max-bezs.com>",
-          to: body.email,
-          subject: `Hey max-bezs received your inquiry✨`,
-          react: EmailTemplate({
-            firstName: "dwdwdw",
-            time: "2024-05-23T19:40:00.000Z",
-            details: body.details,
-            options: {
-              webpage: [false, "Webpage"],
-              webapp: [true, "Web app"],
-              mobileapp: [true, "Mobile App"],
-              nocode: [false, "No-Code"],
-              api: [false, "API"],
-              ecom: [false, "E-commerce"],
-              other: [true, "Other"],
-            },
-          }),
-        });
-        const [ffffResponse] = await Promise.all(ffff);
-        return NextResponse.json({ ffffResponse });
+        console.log("SUBSCRIBED event received. Body:", body);
+        try {
+          // Validate inputs
+          if (!body.email) {
+            throw new Error("Email is missing in the body");
+          }
+          if (!body.details) {
+            throw new Error("Details are missing in the body");
+          }
+
+          console.log("Sending email to:", body.email);
+
+          const emailPayload = {
+            from: "Max <max-bezs@max-bezs.com>",
+            to: body.email,
+            subject: `Hey max-bezs received your inquiry✨`,
+            react: EmailTemplate({
+              firstName: "dwdwdw",
+              time: "2024-05-23T19:40:00.000Z",
+              details: body.details,
+              options: {
+                webpage: [false, "Webpage"],
+                webapp: [true, "Web app"],
+                mobileapp: [true, "Mobile App"],
+                nocode: [false, "No-Code"],
+                api: [false, "API"],
+                ecom: [false, "E-commerce"],
+                other: [true, "Other"],
+              },
+            }),
+          };
+
+          console.log("Email payload:", emailPayload);
+
+          const ffff = resend.emails.send(emailPayload);
+          const [ffffResponse] = await Promise.all([ffff]);
+
+          console.log("Email sent successfully. Response:", ffffResponse);
+
+          return NextResponse.json({ ffffResponse });
+        } catch (error) {
+          console.error("Error in subscription handling:", error);
+          return NextResponse.json({ error: error.message });
+        }
 
       case "schedule_meeting":
         const recipientEmailData = resend.emails.send({
