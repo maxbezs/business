@@ -16,11 +16,11 @@ export const plans = [
     buttonText: "Buy now",
     buttonLink:
       process.env.NODE_ENV === "production"
-        ? "https://buy.stripe.com/cN28xg4U86ALacw3cc"
+        ? "https://buy.stripe.com/8wMbJsaes7EPckEaEJ"
         : "",
     priceId:
       process.env.NODE_ENV === "production"
-        ? "price_1PKkdiHlVYFFZza2F4Grce5B"
+        ? "price_1PKksxHlVYFFZza2mq5s3PAj"
         : "",
   },
   {
@@ -37,13 +37,13 @@ export const plans = [
     buttonText: "Try for free",
     buttonLink:
       process.env.NODE_ENV === "production"
-        ? "https://buy.stripe.com/7sIbJs0DS3ozacw5km"
+        ? "https://buy.stripe.com/9AQ9Bk72gaR170k28c"
         : "",
     buttonSubText: "2 days",
     isPopular: true,
     priceId:
       process.env.NODE_ENV === "production"
-        ? "price_1PKkdTHlVYFFZza2qw0OeQjR"
+        ? "price_1PKktOHlVYFFZza2Z4CWceS3"
         : "",
   },
   {
@@ -60,12 +60,12 @@ export const plans = [
     buttonText: "Try for free",
     buttonLink:
       process.env.NODE_ENV === "production"
-        ? "https://buy.stripe.com/4gweVE0DSf7hfwQ6op"
+        ? "https://buy.stripe.com/8wMdRAbiwaR1acw28b"
         : "",
     buttonSubText: "4 days",
     priceId:
       process.env.NODE_ENV === "production"
-        ? "price_1PKkd8HlVYFFZza2IEwoSjn9"
+        ? "price_1PKktsHlVYFFZza2lrdF1egA"
         : "",
   },
 ];
