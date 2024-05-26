@@ -1,7 +1,9 @@
-import TickMark from "../components/TickMark";
 import MyAccordionComponent from "../components/MyAccordionComponent";
 import H2 from "../components/H2";
+import TickMark from "../components/TickMark";
+
 import ServicesTabs from "../components/ServicesTabs";
+import PlanSection from "../components/PlanSection";
 import { getFaq } from "@/sanity/sanity-utils";
 export const revalidate = 0;
 export const metadata = {
@@ -58,6 +60,74 @@ export const metadata = {
   },
 };
 
+export const plans = [
+  {
+    planType: "Small Business",
+    description: "Built for growth",
+    price: "$1399",
+    features: [
+      "Pause or cancel anytime",
+      "One request at a time",
+      "Average 48 hour delivery",
+      "Unlimited users",
+      "Unlimited features",
+    ],
+    buttonText: "Buy now",
+    buttonLink:
+      process.env.NODE_ENV === "production"
+        ? "https://buy.stripe.com/cN28xg4U86ALacw3cc"
+        : "",
+    priceId:
+      process.env.NODE_ENV === "production"
+        ? "price_1PIphdHlVYFFZza2vurkkqgS"
+        : "",
+  },
+  {
+    planType: "Middle Business",
+    description: "Built for scalability",
+    price: "$1999",
+    features: [
+      "Pause or cancel anytime",
+      "Two requests at a time",
+      "Average 48 hour delivery",
+      "Unlimited users",
+      "Unlimited features",
+    ],
+    buttonText: "Try for free",
+    buttonLink:
+      process.env.NODE_ENV === "production"
+        ? "https://buy.stripe.com/7sIbJs0DS3ozacw5km"
+        : "",
+    buttonSubText: "2 days",
+    isPopular: true,
+    priceId:
+      process.env.NODE_ENV === "production"
+        ? "price_1PIplFHlVYFFZza2oHjgQLh4"
+        : "",
+  },
+  {
+    planType: "Large Business",
+    description: "Built for limitless",
+    price: "$2599",
+    features: [
+      "Pause or cancel anytime",
+      "Two requests at a time",
+      "Average 48 hour delivery",
+      "Unlimited users",
+      "Unlimited features",
+    ],
+    buttonText: "Try for free",
+    buttonLink:
+      process.env.NODE_ENV === "production"
+        ? "https://buy.stripe.com/4gweVE0DSf7hfwQ6op"
+        : "",
+    buttonSubText: "4 days",
+    priceId:
+      process.env.NODE_ENV === "production"
+        ? "price_1PIpmHHlVYFFZza28JVdWxNY"
+        : "",
+  },
+];
 export default async function Pricing() {
   const faq = await getFaq();
 
@@ -107,155 +177,9 @@ export default async function Pricing() {
             </ul>
           </div>*/}
         </section>
-        <section className="h-fit flex flex-col overflow-hidden bg-neutral-950 p-6 justify-between border-neutral-800 w-full rounded-md border  drop-shadow-[0_0px_1px_rgba(256,256,256,0.78)] ">
-          <h3 className="flex items-center text-gray-900 dark:text-gray-100 text-sm font-semibold">
-            <span>Small Business</span>
-          </h3>
-          <p className="relative flex tracking-tight text-gray-900 dark:text-gray-100 mt-5 text-3xl">
-            <span aria-hidden="true" className="space-x-1 transition">
-              <span>$1399</span>
-              <span className="text-sm tracking-normal text-gray-300 dark:text-gray-500">
-                /month
-              </span>
-            </span>
-          </p>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            Built for growth
-          </p>
-          <a
-            className="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-medium outline-2 outline-offset-2 transition-colors border border-transparent bg-neutral-800 dark:bg-transparent text-white hover:bg-background-dark dark:border dark:border-white/10 dark:hover:border-white/20 mt-6"
-            href="/start"
-          >
-            Buy now
-          </a>
-          <div className="mt-6">
-            <ul className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-700 dark:divide-white/10 dark:text-gray-300">
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Pause or cancel anytime</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">One request at a time</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Average 48 hour delivery</span>
-              </li>
-
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Unlimited users</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Unlimited features</span>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section className="h-fit flex flex-col bg-neutral-950 p-6 justify-between border-neutral-800 w-full rounded-md border drop-shadow-[0_0px_6px_rgba(256,256,256,0.78)] hover:drop-shadow-[0_0px_6px_rgba(256,256,256,0.99)]">
-          <div className=" bg-neutral-600 absolute m-auto left-0 right-0 z-10 w-fit top-0 mt-[-24px] p-3 rounded-full">
-            <p className="text-xs		">Most Popular</p>
-          </div>
-          <h3 className="flex items-center text-gray-900 dark:text-gray-100 text-sm font-semibold">
-            <span>Middle Business</span>
-          </h3>
-          <p className="relative flex tracking-tight text-gray-900 dark:text-gray-100 mt-5 text-3xl">
-            <span aria-hidden="true" className="space-x-1 transition">
-              <span>$1999</span>
-              <span className="text-sm tracking-normal text-gray-300 dark:text-gray-500">
-                /month
-              </span>
-            </span>
-          </p>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            Built for scalability
-          </p>
-
-          <div className="order-last mt-6">
-            <ul
-              role="list"
-              className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-700 dark:divide-white/10 dark:text-gray-300"
-            >
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Pause or cancel anytime</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2 underline">Two request at a time</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Average 48 hour delivery</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Unlimited users</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Unlimited features</span>
-              </li>
-            </ul>
-          </div>
-          <a
-            className="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-medium outline-2 outline-offset-2 transition-colors relative overflow-hidden bg-white text-black before:absolute before:inset-0 active:before:bg-transparent hover:before:bg-white/10 active:bg-green-600 active:text-white/80 before:transition-colors mt-6"
-            href="/start"
-          >
-            Try for free <span className="ml-1 underline">2 days</span>
-          </a>
-        </section>
-        <section className="h-fit flex flex-col overflow-hidden bg-neutral-950 p-6 justify-between border-neutral-800 w-full rounded-md border  drop-shadow-[0_0px_1px_rgba(256,256,256,0.78)] ">
-          <h3 className="flex items-center text-gray-900 dark:text-gray-100 text-sm font-semibold">
-            <span>Large business</span>
-          </h3>
-          <p className="relative flex tracking-tight text-gray-900 dark:text-gray-100 mt-5 text-3xl">
-            <span aria-hidden="true" className="space-x-1 transition">
-              <span>$2599</span>
-              <span className="text-sm tracking-normal text-gray-600 dark:text-gray-400">
-                /month
-              </span>
-            </span>
-          </p>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            Built for limitless
-          </p>
-          <div className="order-last mt-6">
-            <ul
-              role="list"
-              className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-700 dark:divide-white/10 dark:text-gray-300"
-            >
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Pause or cancel anytime</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2 underline">Two request at a time</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Average 48 hour delivery</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Unlimited users</span>
-              </li>
-              <li className="flex py-2.5">
-                <TickMark />
-                <span className="ml-2">Unlimited features</span>
-              </li>
-            </ul>
-          </div>
-          <a
-            className="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-medium outline-2 outline-offset-2 transition-colors border border-transparent bg-neutral-800 dark:bg-transparent text-white hover:bg-background-dark dark:border dark:border-white/10 dark:hover:border-white/20 mt-6"
-            href="#"
-          >
-            Try for free <span className="ml-1 underline">4 days</span>
-          </a>
-        </section>
+        {plans.map((plan, index) => (
+          <PlanSection key={index} {...plan} />
+        ))}
         <section className="h-fit flex flex-col overflow-hidden rounded-md p-6 border border-gray-200/70 dark:border-white/[0.15]">
           <h3 className="flex items-center text-gray-900 dark:text-gray-100 text-sm font-semibold">
             <span>Enterprise</span>

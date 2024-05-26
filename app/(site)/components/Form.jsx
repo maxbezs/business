@@ -75,6 +75,7 @@ const Form = () => {
       time: formData.time,
       details: formData.details,
       options: formData.options,
+      emailType: "schedule_meeting",
     };
 
     setIsLoading(true);
