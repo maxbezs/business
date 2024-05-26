@@ -9,14 +9,14 @@ const trelloToken = process.env.TRELLO_TOKEN;
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function POST(req) {
-  const body = await req.text();
-  const signature = headers().get("stripe-signature");
-
+  const sig = req.headers["stripe-signature"];
   let event;
   try {
-    event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
+    const body = await req.text();
+    event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
   } catch (err) {
-    console.error(`Webhook signature verification failed. ${err.message}`);
+    // On error, log and return the error message
+    console.log(`❌ Error message: ${err.message}`);
     return NextResponse.json({ error: err.message }, { status: 400 });
   }
 
