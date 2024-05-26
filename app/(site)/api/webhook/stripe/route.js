@@ -9,7 +9,7 @@ const trelloToken = process.env.TRELLO_TOKEN;
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function POST(req) {
-  const sig = req.headers["stripe-signature"];
+  const sig = req.headers.get("stripe-signature");
   let event;
   try {
     const body = await req.text();
