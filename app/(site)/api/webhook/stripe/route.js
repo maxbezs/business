@@ -99,7 +99,7 @@ export async function POST(req) {
 
             // Update the card description with the new URL
             const updatedDescription = `${currentDescription}\n\n${
-              "https://billing.stripe.com/p/login/test_28oaIy5FGgl8eTScMM" +
+              "https://billing.stripe.com/p/login/00geVD2eg0CV7MkcMM" +
               "?prefilled_email=" +
               customer.email
             }`;
@@ -117,8 +117,8 @@ export async function POST(req) {
             if (updateResponse.ok) {
               const updatedCard = await updateResponse.json();
               console.log(
-                "Card description updated successfully:",
-                updatedCard
+                "Card description updated successfully for :",
+                customer.email
               );
             } else {
               console.error(

@@ -10,10 +10,9 @@ export async function POST(request) {
 
     switch (body.emailType) {
       case "subscribed":
-        console.log(body);
         const ffff = resend.emails.send({
           from: "Max <max-bezs@max-bezs.com>",
-          to: "max.bezsmertnyi@gmail.com",
+          to: body.email,
           subject: `Hey max-bezs received your inquiry✨`,
           react: EmailTemplate({
             firstName: "dwdwdw",
