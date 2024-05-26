@@ -14,7 +14,7 @@ export async function POST(request) {
         const ffff = resend.emails.send({
           from: "Max <max-bezs@max-bezs.com>",
           to: "max.bezsmertnyi@gmail.com",
-          subject: ` max-bezs received your inquiry✨`,
+          subject: `Hey max-bezs received your inquiry✨`,
           react: EmailTemplate({
             firstName: "dwdwdw",
             time: "2024-05-23T19:40:00.000Z",
