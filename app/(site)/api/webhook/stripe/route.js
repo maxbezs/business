@@ -82,12 +82,12 @@ export async function POST(req) {
               cardId = card.id;
             } else {
               console.error(
-                "Failed to create Trello board:",
+                "Failed to find Trello card id:",
                 trelloResponse.statusText
               );
             }
           } catch (error) {
-            console.error("Error creating Trello board:", error);
+            console.error("Error finding Trello card id:", error);
           }
           try {
             const apiUrl = `https://api.trello.com/1/cards/${cardId}?key=${trelloAPIKey}&token=${trelloToken}`;
@@ -129,7 +129,7 @@ export async function POST(req) {
               console.error("Error details:", errorData);
             }
           } catch (error) {
-            console.error("Error creating Trello board:", error);
+            console.error("Error updating card description:", error);
           }
 
           try {

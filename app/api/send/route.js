@@ -10,6 +10,7 @@ export async function POST(request) {
 
     switch (body.emailType) {
       case "subscribed":
+        console.log("SUBSCRIBED: ", body);
         const ffff = resend.emails.send({
           from: "Max <max-bezs@max-bezs.com>",
           to: body.email,
@@ -33,8 +34,6 @@ export async function POST(request) {
         return NextResponse.json({ ffffResponse });
 
       case "schedule_meeting":
-        console.log(body);
-
         const recipientEmailData = resend.emails.send({
           from: "Max <max-bezs@max-bezs.com>",
           to: "max.bezsmertnyi@gmail.com",
