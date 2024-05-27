@@ -1,6 +1,4 @@
-import { NextResponse } from "next/server";
-
-export function handleError(err) {
+export function handleError(err, res) {
   console.error(`❌ Error message: ${err.message}`);
-  return NextResponse.json({ error: err.message }, { status: 400 });
+  return res.status(400).json({ error: err.message });
 }

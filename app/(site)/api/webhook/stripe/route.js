@@ -27,7 +27,7 @@ export async function POST(req) {
         console.log("Unhandled event type:", eventType);
     }
   } catch (err) {
-    return handleError(err);
+    return handleError(err, res);
   }
 
   return NextResponse.json({});
