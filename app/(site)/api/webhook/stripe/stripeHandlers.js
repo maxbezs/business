@@ -10,14 +10,14 @@ export async function handleCheckoutSessionCompleted(sessionId) {
       expand: ["line_items"],
     });
     const customerId = session?.customer;
-
+    const customField = session?.custom_fields[0].text.value;
     if (!customerId) {
       throw new Error("No customer found for session ID:" + sessionId);
     }
 
     const customer = await stripe.customers.retrieve(customerId);
     if (customer.email) {
-      await processCustomerEmail(customer.email, customer.name, "NEW BOARD");
+      await processCustomerEmail(customer.email, customer.name, customField);
     }
 
     console.log(
