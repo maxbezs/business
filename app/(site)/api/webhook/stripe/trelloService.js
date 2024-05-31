@@ -1,5 +1,5 @@
+import { NextResponse } from "next/server";
 import { sendEmailNotification } from "./emailService";
-import { handleError } from "./error";
 
 const trelloAPIKey = process.env.TRELLO_API_KEY;
 const trelloToken = process.env.TRELLO_TOKEN;
@@ -14,22 +14,26 @@ export async function processCustomerEmail(email, name, boardName) {
   };
 
   try {
-    const boardId = await createTrelloBoard();
+    const boardId = await createTrelloBoard(boardName);
     if (boardId) {
+      console.log("✅ Trello board created successfully:", boardId);
       emailData.boardUrl = `https://trello.com/b/${boardId}`;
       const cardId = await findTrelloCard(boardId);
 
       if (cardId) {
+        console.log("✅ Trello card found successfully:", cardId);
         await updateTrelloCardDescription(cardId, email);
         await sendEmailNotification(emailData);
+        console.log("✅ Email notification sent successfully for:", email);
       }
     }
   } catch (err) {
-    handleError(err);
+    console.error(`❌ Error message: ${err.message}`);
+    return NextResponse.json({ error: err.message }, { status: 400 });
   }
 }
 
-async function createTrelloBoard() {
+async function createTrelloBoard(boardName) {
   try {
     const trelloUrl = `https://api.trello.com/1/boards/?name=${boardName}&idBoardSource=6652095e774457f7030e3ca8&key=${trelloAPIKey}&token=${trelloToken}`;
     const response = await fetch(trelloUrl, { method: "POST" });
@@ -39,7 +43,8 @@ async function createTrelloBoard() {
     const data = await response.json();
     return data.id;
   } catch (err) {
-    handleError(err);
+    console.error(`❌ Error message: ${err.message}`);
+    return NextResponse.json({ error: err.message }, { status: 400 });
   }
 }
 
@@ -56,7 +61,8 @@ async function findTrelloCard(boardId) {
     const card = cards.find((c) => c.name === "Manage your subscription📊");
     return card.id;
   } catch (err) {
-    handleError(err);
+    console.error(`❌ Error message: ${err.message}`);
+    return NextResponse.json({ error: err.message }, { status: 400 });
   }
 }
 
@@ -67,7 +73,7 @@ async function updateTrelloCardDescription(cardId, email) {
     const cardData = await cardResponse.json();
     const currentDescription = cardData.desc || "";
 
-    const updatedDescription = `${currentDescription}\n\n[Subscription panel login](https://billing.stripe.com/p/login/00geVD2eg0CV7MkcMM?prefilled_email=${email}"‌")`;
+    const updatedDescription = `${currentDescription}\n\n[Subscription panel login](https://billing.stripe.com/p/login/00geVD2eg0CV7MkcMM?prefilled_email=${email})`;
     const updateResponse = await fetch(apiUrl, {
       method: "PUT",
       headers: {
@@ -81,8 +87,9 @@ async function updateTrelloCardDescription(cardId, email) {
         "Failed to update card description: " + updateResponse.statusText
       );
     }
-    console.log("Card description updated successfully for:", email);
+    console.log("✅ Card description updated successfully for email:", email);
   } catch (err) {
-    handleError(err);
+    console.error(`❌ Error message: ${err.message}`);
+    return NextResponse.json({ error: err.message }, { status: 400 });
   }
 }

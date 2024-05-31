@@ -1,5 +1,5 @@
+import { NextResponse } from "next/server";
 import { processCustomerEmail } from "./trelloService";
-import { handleError } from "./error";
 import Stripe from "stripe";
 
 export async function handleCheckoutSessionCompleted(sessionId) {
@@ -19,7 +19,16 @@ export async function handleCheckoutSessionCompleted(sessionId) {
     if (customer.email) {
       await processCustomerEmail(customer.email, customer.name, "NEW BOARD");
     }
+
+    console.log(
+      "✅ Checkout session completed successfully for customer:",
+      customer.email
+    );
+
+    // Return success response when the checkout session is completed successfully
+    return NextResponse.json({ success: true });
   } catch (err) {
-    handleError(err);
+    console.error(`❌ Error message: ${err.message}`);
+    return NextResponse.json({ error: err.message }, { status: 400 });
   }
 }

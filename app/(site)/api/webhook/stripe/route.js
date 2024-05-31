@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { handleCheckoutSessionCompleted } from "./stripeHandlers";
-import { handleError } from "./error";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
@@ -13,7 +12,7 @@ export async function POST(req) {
     const event = stripe.webhooks.constructEvent(
       body,
       sig,
-      process.env.STRIPE_WEBHOOK_SECRET
+      process.env.STRIPE_WEBHOOK_SECRET_TEST
     );
     const { data, type: eventType } = event;
 
@@ -22,13 +21,14 @@ export async function POST(req) {
         await handleCheckoutSessionCompleted(data.object.id);
         break;
 
-      //More cases here for other event types: https://docs.stripe.com/api/events/types
+      // More cases here for other event types: https://docs.stripe.com/api/events/types
       default:
         console.log("Unhandled event type:", eventType);
     }
-  } catch (err) {
-    return handleError(err, res);
-  }
 
-  return NextResponse.json({});
+    return NextResponse.json({ success: true });
+  } catch (err) {
+    console.error(`❌ Error message: ${err.message}`);
+    return NextResponse.json({ error: err.message }, { status: 400 });
+  }
 }

@@ -1,4 +1,4 @@
-import { handleError } from "./error";
+import { NextResponse } from "next/server";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -16,8 +16,12 @@ export async function sendEmailNotification(emailData) {
       throw new Error("Failed to send email: " + emailResponse.statusText);
     }
 
-    console.log("Email notification sent for:", emailData.email);
+    console.log("✅ Email notification sent for:", emailData.email);
+
+    // Return success response when the email notification is sent successfully
+    return NextResponse.json({ success: true });
   } catch (err) {
-    handleError(err);
+    console.error(`❌ Error message: ${err.message}`);
+    return NextResponse.json({ error: err.message }, { status: 400 });
   }
 }

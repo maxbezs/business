@@ -5,7 +5,7 @@ export const plans = [
   {
     planType: "Small Business",
     description: "Built for growth",
-    price: "$1399",
+    price: "$0.1",
     features: [
       "Pause or cancel anytime",
       "One request at a time",
@@ -17,11 +17,11 @@ export const plans = [
     buttonLink:
       process.env.NODE_ENV === "production"
         ? "https://buy.stripe.com/8wMbJsaes7EPckEaEJ"
-        : "",
+        : "https://buy.stripe.com/test_aEUcO1f7D2HW7q8144",
     priceId:
       process.env.NODE_ENV === "production"
         ? "price_1PKksxHlVYFFZza2mq5s3PAj"
-        : "",
+        : "price_1PJGpFHlVYFFZza2LiWK0d99",
   },
   {
     planType: "Middle Business",
@@ -38,13 +38,13 @@ export const plans = [
     buttonLink:
       process.env.NODE_ENV === "production"
         ? "https://buy.stripe.com/9AQ9Bk72gaR170k28c"
-        : "",
+        : "https://buy.stripe.com/test_9AQ9BP1gN6YcfWE3cd",
     buttonSubText: "2 days",
     isPopular: true,
     priceId:
       process.env.NODE_ENV === "production"
         ? "price_1PKktOHlVYFFZza2Z4CWceS3"
-        : "",
+        : "price_1PJGpFHlVYFFZza2LiWK0d99",
   },
   {
     planType: "Large Business",
@@ -61,12 +61,12 @@ export const plans = [
     buttonLink:
       process.env.NODE_ENV === "production"
         ? "https://buy.stripe.com/8wMdRAbiwaR1acw28b"
-        : "",
+        : "https://buy.stripe.com/test_7sI9BP6B76Yc9yg4gi",
     buttonSubText: "4 days",
     priceId:
       process.env.NODE_ENV === "production"
         ? "price_1PKktsHlVYFFZza2lrdF1egA"
-        : "",
+        : "price_1PJGoDHlVYFFZza2EwVLeZ3Y",
   },
 ];
 export default async function SecretPricing() {

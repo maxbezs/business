@@ -15,7 +15,7 @@ import {
   Tailwind,
 } from "@react-email/components";
 import * as React from "react";
-export const EmailTemplate = ({ firstName, time, details, options }) => {
+export function EmailTemplate({ firstName, time, details, options }) {
   const filteredData = Object.entries(options)
     .filter(([, [value]]) => value) // Filter based on the true value
     .map(([key, [, label]]) => <Column key={key}>{label}</Column>);
@@ -89,9 +89,9 @@ export const EmailTemplate = ({ firstName, time, details, options }) => {
                   <Container className="w-fit mx-auto my-8">
                     <Link
                       className="align-baseline bg-neutral-700 rounded-lg text-white cursor-pointer select-none focus:outline-none py-3 px-4 no-underline w-fit"
-                      href="mailto:contact@max-bezs.com"
+                      href="mailto:max.bezsmertnyi@gmail.com"
                     >
-                      contact@max-bezs.com
+                      Contact via email
                     </Link>
                   </Container>
 
@@ -107,6 +107,4 @@ export const EmailTemplate = ({ firstName, time, details, options }) => {
       </Html>
     </Tailwind>
   );
-};
-
-export default EmailTemplate;
+}

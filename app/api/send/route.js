@@ -1,5 +1,7 @@
 import { EmailTemplate } from "../../(site)/components/EmailTemplate";
 import { NextResponse } from "next/server";
+import { EmailSubscribed } from "../../(site)/components/EmailSubscribed";
+
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_KEY);
@@ -16,29 +18,17 @@ export async function POST(request) {
           if (!body.email) {
             throw new Error("Email is missing in the body");
           }
-          if (!body.details) {
-            throw new Error("Details are missing in the body");
-          }
 
           console.log("Sending email to:", body.email);
 
           const emailPayload = {
             from: "Max <max-bezs@max-bezs.com>",
             to: body.email,
-            subject: `Hey max-bezs received your inquiry✨`,
-            react: EmailTemplate({
-              firstName: "dwdwdw",
-              time: "2024-05-23T19:40:00.000Z",
-              details: body.details,
-              options: {
-                webpage: [false, "Webpage"],
-                webapp: [true, "Web app"],
-                mobileapp: [true, "Mobile App"],
-                nocode: [false, "No-Code"],
-                api: [false, "API"],
-                ecom: [false, "E-commerce"],
-                other: [true, "Other"],
-              },
+            subject: `All set up, let's make dream come true!🚀`,
+            react: EmailSubscribed({
+              trelloUrl: body.boardUrl,
+              name: body.name,
+              business: body.boardName,
             }),
           };
 
