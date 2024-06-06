@@ -62,7 +62,7 @@ const blogBlock = {
     {
       type: "markdown",
       description: "page content",
-      name: "Content",
+      name: "content",
     },
   ],
 };

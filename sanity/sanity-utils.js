@@ -85,17 +85,13 @@ export async function getBlog(slug) {
     groq`*[_type == "blogBlock" && slug.current == $slug][0]{
       heading,
       ctaHeading,
-    ctaParagraph,
-    ctaButtonText,
+      ctaParagraph,
+      ctaButtonText,
       _createdAt,
-    _updatedAt,
+      _updatedAt,
       "poster": poster.asset->url,
       "content": content[]{
-        ...,
-        _type == "image" => {
-          "imageUrl": asset->url,
-          ...
-        }
+        ...
       }
     }`,
     { slug }
