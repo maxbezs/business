@@ -91,7 +91,11 @@ export async function getBlog(slug) {
       _updatedAt,
       "poster": poster.asset->url,
       "content": content[]{
-        ...
+        ...,
+        _type == "image" => {
+          "imageUrl": asset->url,
+          ...
+        }
       }
     }`,
     { slug }
