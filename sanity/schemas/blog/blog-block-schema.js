@@ -66,7 +66,7 @@ const blogBlock = {
       title: "Content",
       of: [
         {
-          type: "block",
+          type: "markdown",
         },
         {
           type: "image",
