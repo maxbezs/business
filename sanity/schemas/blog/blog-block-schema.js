@@ -59,30 +59,10 @@ const blogBlock = {
       title: "CTA Button Text",
       type: "string",
     },
-
     {
-      name: "content",
-      type: "array",
-      title: "Content",
-      of: [
-        {
-          type: "markdown",
-        },
-        {
-          type: "image",
-          fields: [
-            {
-              name: "alt",
-              type: "string",
-              title: "Alternative text",
-              description: "Important for SEO and accessiblity.",
-              options: {
-                isHighlighted: true,
-              },
-            },
-          ],
-        },
-      ],
+      type: "markdown",
+      description: "page content",
+      name: "Content",
     },
   ],
 };
