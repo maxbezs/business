@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-email/components": "^0.0.19",
+    "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/table": "^1.1.2",
     "@stripe/stripe-js": "^3.5.0",
     "@types/styled-components": "^5.1.34",

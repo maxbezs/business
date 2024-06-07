@@ -55,7 +55,9 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
               src={poster}
             />
           </div>
-          <H3 className="mt-5">{heading}</H3>
+          <h3 className="mt-3 text-gray-900 dark:text-gray-100 text-2xl">
+            {heading}
+          </h3>
 
           <h2 className="mt-3 text-gray-500 dark:text-gray-400 text-[14px] leading-relaxed">
             {paragraph}

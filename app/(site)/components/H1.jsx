@@ -3,7 +3,7 @@ const H1 = ({ className = "", children }) => {
     <h1
       className={
         className +
-        " text-3xl md:text-[48px] lg:text-[60px] font-bold mb-4 leading-none	"
+        " text-3xl md:text-[48px] lg:text-[60px] font-bold mb-4 leading-tight tracking-normal	"
       }
     >
       {children}

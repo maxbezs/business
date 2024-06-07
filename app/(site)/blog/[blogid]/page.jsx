@@ -10,6 +10,7 @@ import H3 from "../../components/H3";
 import Time from "../../components/Time";
 import BlogBlock from "../../components/BlogBlock";
 export const revalidate = 0;
+import BlockContent from "@sanity/block-content-to-react";
 
 const TextElement = ({ child, markDefs }) => {
   const linkDef = markDefs.find((def) => child.marks.includes(def._key));
@@ -93,6 +94,22 @@ export default async function page({ params }) {
       ? updatedAt
       : createdAt;
   }
+  const serializers = {
+    types: {
+      block: (props) => {
+        switch (props.node.style) {
+          case "h1":
+            return <H1>{props.children}</H1>;
+          case "h2":
+            return <H2>{props.children}</H2>;
+          case "blockquote":
+            return <blockquote>{props.children}</blockquote>;
+          default:
+            return <Paragraph>{props.children}</Paragraph>;
+        }
+      },
+    },
+  };
   return (
     <div className="pt-4">
       <div className="flex-col mx-auto max-w-4xl px-8">
@@ -122,17 +139,23 @@ export default async function page({ params }) {
             <p className="text-gray-600 dark:text-gray-400">CTO</p>
           </div>
         </div>
-        <Image
-          alt={blog.heading}
-          width="1600"
-          height="800"
-          className="w-full h-auto object-cover "
-          src={blog.poster}
-        />
+        <div className="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden">
+          <Image
+            alt={blog.heading}
+            width="1600"
+            height="800"
+            className="w-full h-[30rem] sm:h-[20rem] object-cover group-hover:scale-105 transition"
+            src={blog.poster}
+          />
+        </div>
+
         <div className="mt-4 prose lg:prose-xl dark:prose-invert w-full">
-          {blog.content.map((block, index) => (
-            <ContentBlock key={index} block={block} />
-          ))}
+          <BlockContent
+            blocks={blog.content}
+            projectId="v1ithwqy"
+            dataset="production"
+            serializers={serializers}
+          />
         </div>
         <div className=" flex flex-col my-12 mx-auto max-w-4xl">
           <H2>{blog.ctaHeading}</H2>
