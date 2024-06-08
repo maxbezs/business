@@ -21,9 +21,7 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
             <div className="mt-5 text-gray-500 dark:text-gray-400 flex items-center text-[14px] space-x-1.5">
               <Time dateTime={date} />
             </div>
-            <h1 className="mt-3 text-gray-900 dark:text-gray-100 text-2xl">
-              {heading}
-            </h1>
+            <h1 className="mt-3 text-gray-200 text-2xl">{heading}</h1>
             <h2 className="mt-3 text-gray-500 dark:text-gray-400 leading-relaxed">
               {paragraph}
             </h2>
@@ -55,9 +53,7 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
               src={poster}
             />
           </div>
-          <h3 className="mt-3 text-gray-900 dark:text-gray-100 text-2xl">
-            {heading}
-          </h3>
+          <h3 className="mt-3 text-gray-200 text-2xl">{heading}</h3>
 
           <h2 className="mt-3 text-gray-500 dark:text-gray-400 text-[14px] leading-relaxed">
             {paragraph}

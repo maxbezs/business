@@ -133,9 +133,7 @@ export default async function page({ params }) {
             className="h-10 w-10 rounded-full"
           />
           <div className="text-sm leading-6">
-            <p className="font-semibold text-gray-900 dark:text-gray-200">
-              max_bezs
-            </p>
+            <p className="font-semibold text-gray-200">max_bezs</p>
             <p className="text-gray-600 dark:text-gray-400">CTO</p>
           </div>
         </div>

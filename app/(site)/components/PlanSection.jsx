@@ -21,10 +21,10 @@ const PlanSection = ({
         <p className="text-xs">Most Popular</p>
       </div>
     )}
-    <h3 className="flex items-center text-gray-900 dark:text-gray-100 text-sm font-semibold">
+    <h3 className="flex items-center text-gray-200 text-sm font-semibold">
       <span>{planType}</span>
     </h3>
-    <p className="relative flex tracking-tight text-gray-900 dark:text-gray-100 mt-5 text-3xl">
+    <p className="relative flex tracking-tight text-gray-200 mt-5 text-3xl">
       <span aria-hidden="true" className="space-x-1 transition">
         <span>{price}</span>
         <span className="text-sm tracking-normal text-gray-300 dark:text-gray-500">

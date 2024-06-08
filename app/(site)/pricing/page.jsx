@@ -144,10 +144,10 @@ export default async function Pricing() {
       </div>
       <div className="mt-12 grid max-w-7xl mx-auto grid-cols-1 gap-12 lg:gap-3 lg:grid-cols-5 px-8">
         <section className="h-fit flex flex-col overflow-hidden rounded-md p-6 border border-white/[0.15]">
-          <h3 className="flex items-center text-gray-900 dark:text-gray-100 text-sm font-semibold">
+          <h3 className="flex items-centertext-gray-200 text-sm font-semibold">
             <span>Free</span>
           </h3>
-          <p className="relative flex tracking-tight text-gray-100 mt-5 text-3xl">
+          <p className="relative flex tracking-tight text-gray-200 mt-5 text-3xl">
             <span className="space-x-1">
               $0
               <span className="text-sm tracking-normal text-gray-400">
@@ -181,10 +181,10 @@ export default async function Pricing() {
           <PlanSection key={index} {...plan} />
         ))}
         <section className="h-fit flex flex-col overflow-hidden rounded-md p-6 border border-gray-200/70 dark:border-white/[0.15]">
-          <h3 className="flex items-center text-gray-900 dark:text-gray-100 text-sm font-semibold">
+          <h3 className="flex items-center text-gray-200 text-sm font-semibold">
             <span>Enterprise</span>
           </h3>
-          <p className="relative flex tracking-tight text-gray-900 dark:text-gray-100 mt-5 text-3xl">
+          <p className="relative flex tracking-tight text-gray-200 mt-5 text-3xl">
             Custom
           </p>
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
