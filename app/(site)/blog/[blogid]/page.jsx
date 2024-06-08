@@ -157,7 +157,7 @@ export default async function page({ params }) {
             serializers={serializers}
           />
         </div>
-        <div className=" flex flex-col my-12 mx-auto max-w-4xl bg-neutral-700">
+        <div className=" flex flex-col my-12 mx-auto max-w-4xl ">
           <H2>{blog.ctaHeading}</H2>
           <Paragraph>{blog.ctaParagraph}</Paragraph>
           <Button href="/pricing">{blog.ctaButtonText} </Button>
