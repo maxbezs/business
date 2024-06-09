@@ -14,7 +14,7 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
               width="1600"
               height="800"
               className="w-full h-auto object-cover group-hover:scale-105 transition"
-              src={poster}
+              src={poster || "/listmax.webp"}
             />
           </div>
           <div className="col-span-1">
