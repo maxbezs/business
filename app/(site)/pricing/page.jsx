@@ -137,7 +137,7 @@ export default async function Pricing() {
         <div className="mx-auto max-w-[22rem] md:max-w-[41rem] font-cfont text-3xl md:text-5xl leading-tight space-y-2 text-gray-800 dark:text-gray-200">
           <h1>Choose a plan to MAX📈 Your Business </h1>
         </div>
-        <p className="mt-4 mx-auto max-w-[30rem] text-gray-600 dark:text-gray-400 md:leading-loose">
+        <p className="mt-4 mx-auto max-w-[30rem] text-gray-200 dark:text-gray-400 md:leading-loose">
           By choosing any plan You make first step to make Your Dream Business -
           Real
         </p>
@@ -155,7 +155,7 @@ export default async function Pricing() {
               </span>
             </span>
           </p>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-200 dark:text-gray-400">
             The only guide for solopreneur
           </p>
           <a
@@ -167,7 +167,7 @@ export default async function Pricing() {
           {/*<div className="order-last mt-6">
             <ul
               role="list"
-              className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-700 dark:divide-white/10 dark:text-gray-300"
+              className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-200 dark:divide-white/10 dark:text-gray-300"
             >
               <li className="flex py-2.5">
                 <TickMark />
@@ -187,7 +187,7 @@ export default async function Pricing() {
           <p className="relative flex tracking-tight text-gray-200 mt-5 text-3xl">
             Custom
           </p>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-200 dark:text-gray-400">
             Fully tailored for your business
           </p>
           <a
@@ -199,7 +199,7 @@ export default async function Pricing() {
           <div className="order-last mt-6">
             <ul
               role="list"
-              className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-700 dark:divide-white/10 dark:text-gray-300"
+              className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-200 dark:divide-white/10 dark:text-gray-300"
             >
               <li className="flex py-2.5">
                 <TickMark />

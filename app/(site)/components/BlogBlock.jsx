@@ -36,7 +36,7 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
                 />
               </div>
               <div className="text-[14px]">
-                <p className="text-gray-700 dark:text-gray-300">max_bezs</p>
+                <p className="text-gray-200 dark:text-gray-300">max_bezs</p>
                 <p className="text-gray-500 dark:text-gray-400">CTO</p>
               </div>
             </div>
@@ -50,7 +50,7 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
               width="800"
               height="400"
               className="w-full h-[15rem] sm:h-[13rem] object-cover group-hover:scale-105 transition"
-              src={poster}
+              src={poster || "/listmax.webp"}
             />
           </div>
           <h3 className="mt-3 text-gray-200 text-2xl">{heading}</h3>
@@ -67,7 +67,7 @@ function BlogBlock({ href, heading, paragraph, poster, date, highlighted }) {
               src="/business-logo-small.png"
             />
             <div className="text-gray-500 dark:text-gray-400 flex items-center text-[14px] space-x-1.5">
-              <p className="text-gray-700 dark:text-gray-300">max_bezs</p>
+              <p className="text-gray-200 dark:text-gray-300">max_bezs</p>
               <p>•</p>
               <Time dateTime={date} />
             </div>

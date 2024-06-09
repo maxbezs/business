@@ -32,13 +32,13 @@ const PlanSection = ({
         </span>
       </span>
     </p>
-    <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+    <p className="mt-4 text-sm text-gray-200 dark:text-gray-400">
       {description}
     </p>
     <div className="order-last mt-6">
       <ul
         role="list"
-        className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-700 dark:divide-white/10 dark:text-gray-300"
+        className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-200 dark:divide-white/10 dark:text-gray-300"
       >
         {features.map((feature, index) => (
           <li key={index} className="flex py-2.5">

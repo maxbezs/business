@@ -134,7 +134,7 @@ export default async function page({ params }) {
           />
           <div className="text-sm leading-6">
             <p className="font-semibold text-gray-200">max_bezs</p>
-            <p className="text-gray-600 dark:text-gray-400">CTO</p>
+            <p className="text-gray-200 dark:text-gray-400">CTO</p>
           </div>
         </div>
         <div className="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden">
