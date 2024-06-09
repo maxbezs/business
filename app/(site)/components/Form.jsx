@@ -101,9 +101,31 @@ const Form = () => {
       setIsLoading(false);
     }
   };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    const data = {
+      _type: "blogBlock",
+      heading: "heading",
+      paragraph: "paragraph",
+      // Add more fields here as needed
+    };
+
+    try {
+      const response = await addBlog(data);
+      console.log("Blog added successfully:", response);
+    } catch (error) {
+      console.error("Error adding blog:", error);
+    }
+  };
   return (
     <form className="flex w-full flex-col lg:flex-row" onSubmit={sendEmail}>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Heading" value={"heading"} />
+        <textarea placeholder="Paragraph" value={"paragraph"}></textarea>
+        {/* Add more input fields for other blog data */}
+        <button type="submit">Add Blog</button>
+      </form>
       <div className="flex w-full lg:w-1/2">
         <ScheduleMeeting
           borderRadius={8}
