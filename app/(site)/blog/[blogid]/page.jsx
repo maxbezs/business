@@ -11,58 +11,6 @@ import Time from "../../components/Time";
 import BlogBlock from "../../components/BlogBlock";
 export const revalidate = 0;
 import BlockContent from "@sanity/block-content-to-react";
-
-const TextElement = ({ child, markDefs }) => {
-  const linkDef = markDefs.find((def) => child.marks.includes(def._key));
-  return linkDef ? (
-    <a href={linkDef.href} className="text-sky-500 underline">
-      {child.text}
-    </a>
-  ) : (
-    <>{child.text}</>
-  );
-};
-const generateReadableId = (text) => {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9]/gi, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
-};
-const ContentBlock = ({ block }) => {
-  // Function to render children text elements
-  const renderChildren = () =>
-    block.children?.map((child, index) => (
-      <TextElement key={index} child={child} markDefs={block.markDefs} />
-    ));
-
-  const blockStyle = block.style;
-
-  // Check if the block is an image
-  if (block._type === "image") {
-    // Render an Image component for the image
-    return (
-      <Image
-        src={block.imageUrl}
-        alt={block.alt || ""}
-        width={1600} // Set appropriate width
-        height={800} // Set appropriate height
-        className="w-full h-auto object-cover"
-      />
-    );
-  }
-
-  // Render headers
-  if (blockStyle === "h2" || blockStyle === "h3") {
-    const Component = blockStyle === "h2" ? H2 : H3;
-    const readableId = generateReadableId(block.children[0].text);
-    return <Component id={readableId}>{renderChildren()}</Component>;
-  }
-
-  // Render paragraphs
-  return <Paragraph>{renderChildren()}</Paragraph>;
-};
-
 export default async function page({ params }) {
   const blog = await getBlog("blog/" + params.blogid);
   const exploreBlogs = await getExploreBlogs();
@@ -102,6 +50,8 @@ export default async function page({ params }) {
             return <H1>{props.children}</H1>;
           case "h2":
             return <H2>{props.children}</H2>;
+          case "h3":
+            return <H3>{props.children}</H3>;
           case "blockquote":
             return <blockquote>{props.children}</blockquote>;
           default:
@@ -119,10 +69,15 @@ export default async function page({ params }) {
           </Link>
         </div>
 
-        <H1 className="leading-none		">{blog.heading}</H1>
+        <H1 className="leading-none		">{blog?.heading}</H1>
         <div className="flex gap-x-1">
-          <Time dateTime={comparedTimes(blog._createdAt, blog._updatedAt)} />
-          <p>• {calculateReadingTime(blog)} minutes read</p>
+          <Time
+            dateTime={comparedTimes(
+              blog?._createdAt || 0,
+              blog?._updatedAt || 0
+            )}
+          />
+          <p>• {calculateReadingTime(blog || "no data")} minutes read</p>
         </div>
         <div className=" flex items-center gap-x-4 my-4">
           <Image
@@ -139,26 +94,26 @@ export default async function page({ params }) {
         </div>
         <div className="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden">
           <Image
-            alt={blog.heading}
+            alt={blog?.heading}
             width="1600"
             height="800"
             className="w-full h-[30rem] sm:h-[20rem] object-cover group-hover:scale-105 transition"
-            src={blog.poster}
+            src={blog?.poster}
           />
         </div>
 
         <div className="mt-4 prose lg:prose-xl dark:prose-invert w-full">
           <BlockContent
-            blocks={blog.content}
+            blocks={blog?.content}
             projectId="v1ithwqy"
             dataset="production"
             serializers={serializers}
           />
         </div>
         <div className=" flex flex-col my-12 mx-auto max-w-4xl ">
-          <H2>{blog.ctaHeading}</H2>
-          <Paragraph>{blog.ctaParagraph}</Paragraph>
-          <Button href="/pricing">{blog.ctaButtonText} </Button>
+          <H2>{blog?.ctaHeading}</H2>
+          <Paragraph>{blog?.ctaParagraph}</Paragraph>
+          <Button href="/pricing">{blog?.ctaButtonText} </Button>
         </div>
       </div>
       <div className="mt-12 max-w-6xl mx-auto px-8 lg:px-0">
