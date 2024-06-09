@@ -109,3 +109,6 @@ export async function getFaq() {
     }`
   );
 }
+export async function addBlog(data) {
+  return createClient(clientConfig).create(data);
+}

@@ -63,8 +63,31 @@ export default async function Blog() {
       ? updatedAt
       : createdAt;
   }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      _type: "blogBlock",
+      heading: "HEADING",
+      paragraph: "PARAGRAPH",
+      // Add more fields here as needed
+    };
+
+    try {
+      const response = await addBlog(data);
+      console.log("Blog added successfully:", response);
+      // Clear the form fields after successful submission
+      // Clear other fields if needed
+    } catch (error) {
+      console.error("Error adding blog:", error);
+    }
+  };
   return (
     <div className="my-8 px-8 mx-auto max-w-6xl">
+      <form onSubmit={handleSubmit}>
+        {/* Add more input fields for other blog data */}
+        <button type="submit">Add Blog</button>
+      </form>
       {highlightedBlogs.map((block) => (
         <BlogBlock
           key={block.slug}
