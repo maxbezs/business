@@ -106,12 +106,12 @@ const Form = () => {
     e.preventDefault();
 
     const data = {
-      ctaSectionButtonText: "Contact Us",
-      ctaSectionHeading: "Get in Touch for Your Restaurant Technology Needs",
-      ctaSectionParagraph:
+      ctaButtonText: "Contact Us",
+      ctaHeading: "Get in Touch for Your Restaurant Technology Needs",
+      ctaParagraph:
         "Discover the best solutions to boost your restaurant's efficiency and customer satisfaction.",
       heading: "Exploring Technology Solutions for Restaurants",
-      shortParagraphOfBlogpost:
+      paragraph:
         "Restaurants can benefit greatly from various technological solutions to streamline operations and enhance customer experience. Let's explore some of the top options available in the market.",
       content: [
         {
