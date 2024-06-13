@@ -106,44 +106,31 @@ const Form = () => {
     e.preventDefault();
 
     const data = {
-      _type: "blogBlock",
-      ctaButtonText: "Get Started",
-      ctaSectionHeading:
-        "Ready to elevate your restaurant with a professional website?",
+      ctaSectionButtonText: "Contact Us",
+      ctaSectionHeading: "Get in Touch for Your Restaurant Technology Needs",
       ctaSectionParagraph:
-        "Subscribe to our plan and enhance your restaurant's online presence to attract diners and drive reservations!",
-      heading: "Why Your Restaurant Needs a Website",
-      highlighted: false,
+        "Discover the best solutions to boost your restaurant's efficiency and customer satisfaction.",
+      heading: "Exploring Technology Solutions for Restaurants",
       shortParagraphOfBlogpost:
-        "Unlock the power of a website to increase customers, engage diners, and drive success for your restaurant.",
-      poster: {
-        _type: "image",
-        asset: {
-          _ref: "image-d0e4f469b6e68696912b716049e349ec030b774d-1064x608-png",
-          _type: "reference",
-        },
-      },
-      slug: {
-        _type: "slug",
-        current: "blog/why-your-restaurant-needs-a-website",
-      },
+        "Restaurants can benefit greatly from various technological solutions to streamline operations and enhance customer experience. Let's explore some of the top options available in the market.",
       content: [
         {
           _type: "block",
-          style: "h1",
+          style: "h2",
           children: [
             {
               _type: "span",
-              text: "Why Your Restaurant Needs a Website",
+              text: "1. Online Ordering Systems",
             },
           ],
         },
         {
           _type: "block",
+          style: "body",
           children: [
             {
               _type: "span",
-              text: "In today’s digital age, having a robust online presence is crucial for any business, including restaurants. A well-designed website can be a powerful tool to attract and retain customers. Here are several compelling reasons why your restaurant needs a website.",
+              text: "Online ordering systems have become essential for restaurants, especially with the increase in demand for delivery and takeout. These systems allow customers to place orders conveniently through websites or mobile apps, increasing sales and improving operational efficiency.",
             },
           ],
         },
@@ -153,35 +140,17 @@ const Form = () => {
           children: [
             {
               _type: "span",
-              text: "1. Online Visibility and Reach",
+              text: "2. Reservation Management Software",
             },
           ],
         },
         {
           _type: "block",
+          style: "body",
           children: [
             {
               _type: "span",
-              text: "A website increases your restaurant's visibility. Potential customers often turn to search engines to find dining options. Without a website, you miss out on reaching these customers. A well-optimized website ensures that your restaurant appears in search results, allowing you to tap into a broader audience.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "2. Showcase Your Menu",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          children: [
-            {
-              _type: "span",
-              text: "Your website is the perfect place to showcase your menu. High-quality images and detailed descriptions can entice potential customers to choose your restaurant over others. It’s also a great way to highlight special dishes, seasonal menus, and any dietary options you offer.",
+              text: "Reservation management software helps restaurants manage their bookings effectively, reducing wait times and optimizing table turnover. Some advanced solutions also offer customer relationship management features to personalize the dining experience.",
             },
           ],
         },
@@ -191,49 +160,17 @@ const Form = () => {
           children: [
             {
               _type: "span",
-              text: "3. Enhance Customer Experience",
+              text: "3. Point of Sale (POS) Systems",
             },
           ],
         },
         {
           _type: "block",
+          style: "body",
           children: [
             {
               _type: "span",
-              text: "A website provides essential information that enhances the customer experience. This includes:",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          listItem: "bullet",
-          children: [
-            {
-              _type: "span",
-              text: "Operating Hours: Clearly stating your hours of operation helps customers plan their visit.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          listItem: "bullet",
-          children: [
-            {
-              _type: "span",
-              text: "Location and Contact Information: Making it easy for customers to find and contact you.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          listItem: "bullet",
-          children: [
-            {
-              _type: "span",
-              text: "Reservations: Offering an online reservation system can improve convenience for customers and streamline your operations.",
+              text: "POS systems streamline the payment process, track inventory, and generate sales reports for restaurants. These systems ensure accurate transactions and help in managing finances efficiently.",
             },
           ],
         },
@@ -243,172 +180,17 @@ const Form = () => {
           children: [
             {
               _type: "span",
-              text: "4. Build Your Brand",
+              text: "4. Kitchen Display Systems (KDS)",
             },
           ],
         },
         {
           _type: "block",
+          style: "body",
           children: [
             {
               _type: "span",
-              text: "A website is a reflection of your restaurant's brand. Through the design, color scheme, and content, you can convey your restaurant’s ambiance and ethos. Consistent branding across your website and physical location strengthens your identity and helps in building a loyal customer base.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "5. Online Ordering and Delivery",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          children: [
-            {
-              _type: "span",
-              text: "Incorporating online ordering and delivery services into your website can significantly boost your sales. Many customers prefer the convenience of ordering food online. By providing this option directly through your website, you can avoid third-party fees and maintain better control over the customer experience.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "6. Customer Reviews and Testimonials",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          children: [
-            {
-              _type: "span",
-              text: "Featuring customer reviews and testimonials on your website can build trust and credibility. Positive reviews act as social proof, convincing potential customers to give your restaurant a try. Encouraging satisfied customers to leave reviews can continuously enhance your reputation.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "7. Marketing and Promotions",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          children: [
-            {
-              _type: "span",
-              text: "Your website is a versatile marketing tool. You can:",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          listItem: "bullet",
-          children: [
-            {
-              _type: "span",
-              text: "Promote Special Events: Advertise special events, live music nights, or themed dinners.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          listItem: "bullet",
-          children: [
-            {
-              _type: "span",
-              text: "Offer Promotions and Discounts: Attract customers with special offers and discounts.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          listItem: "bullet",
-          children: [
-            {
-              _type: "span",
-              text: "Run Email Campaigns: Collect email addresses for a newsletter to keep customers informed about new menu items and upcoming events.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "8. Collect Customer Feedback",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          children: [
-            {
-              _type: "span",
-              text: "A website allows you to collect valuable feedback from your customers. Whether through a contact form or surveys, understanding customer preferences and concerns can help you improve your service and offerings.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "9. Competitive Advantage",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          children: [
-            {
-              _type: "span",
-              text: "Many of your competitors likely have a website. Without one, you risk falling behind. A website can give you a competitive edge by making your restaurant more accessible and appealing to potential customers.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "Conclusion",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          children: [
-            {
-              _type: "span",
-              text: "In the competitive restaurant industry, having a website is not just a luxury but a necessity. It enhances your online presence, improves customer experience, and provides a platform for marketing and growth. Invest in a well-designed website to ensure your restaurant thrives in the digital era.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          children: [
-            {
-              _type: "span",
-              text: "By embracing the digital landscape, your restaurant can reach new heights and delight customers both old and new. Don’t miss out on the opportunity to make your mark online.",
+              text: "KDS solutions improve the communication between the kitchen and the front of the house, reducing order errors and enhancing kitchen efficiency. These systems display orders digitally, making it easier for chefs to manage and prioritize tasks.",
             },
           ],
         },
