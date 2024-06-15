@@ -13,6 +13,7 @@ export const revalidate = 0;
 import BlockContent from "@sanity/block-content-to-react";
 export default async function page({ params }) {
   const blog = await getBlog("blog/" + params.blogid);
+  console.log(blog);
   const exploreBlogs = await getExploreBlogs();
 
   function calculateReadingTime(jsonData) {

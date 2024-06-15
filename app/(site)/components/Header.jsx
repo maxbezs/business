@@ -61,6 +61,7 @@ const Header = () => {
             src="/business-logo-small.png"
             width="64"
             height="64"
+            priority={true}
           />
         </Link>
         <div className="md:hidden">

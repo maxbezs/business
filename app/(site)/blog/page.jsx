@@ -51,6 +51,7 @@ export const metadata = {
 };
 export default async function Blog() {
   const blogs = await getBlogs();
+  console.log(blogs);
   const highlightedBlogs = blogs.filter((blog) => blog.highlighted);
   const regularBlogs = blogs.filter((blog) => !blog.highlighted);
   regularBlogs.sort(

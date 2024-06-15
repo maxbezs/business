@@ -5,7 +5,6 @@ import FormInput from "./FormInput";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import H2 from "./H2";
-import { addBlog } from "@/sanity/sanity-utils";
 
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -102,116 +101,9 @@ const Form = () => {
       setIsLoading(false);
     }
   };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    const data = {
-      ctaButtonText: "Contact Us",
-      ctaHeading: "Get in Touch for Your Restaurant Technology Needs",
-      ctaParagraph:
-        "Discover the best solutions to boost your restaurant's efficiency and customer satisfaction.",
-      heading: "Exploring Technology Solutions for Restaurants",
-      paragraph:
-        "Restaurants can benefit greatly from various technological solutions to streamline operations and enhance customer experience. Let's explore some of the top options available in the market.",
-      content: [
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "1. Online Ordering Systems",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "body",
-          children: [
-            {
-              _type: "span",
-              text: "Online ordering systems have become essential for restaurants, especially with the increase in demand for delivery and takeout. These systems allow customers to place orders conveniently through websites or mobile apps, increasing sales and improving operational efficiency.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "2. Reservation Management Software",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "body",
-          children: [
-            {
-              _type: "span",
-              text: "Reservation management software helps restaurants manage their bookings effectively, reducing wait times and optimizing table turnover. Some advanced solutions also offer customer relationship management features to personalize the dining experience.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "3. Point of Sale (POS) Systems",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "body",
-          children: [
-            {
-              _type: "span",
-              text: "POS systems streamline the payment process, track inventory, and generate sales reports for restaurants. These systems ensure accurate transactions and help in managing finances efficiently.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h2",
-          children: [
-            {
-              _type: "span",
-              text: "4. Kitchen Display Systems (KDS)",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "body",
-          children: [
-            {
-              _type: "span",
-              text: "KDS solutions improve the communication between the kitchen and the front of the house, reducing order errors and enhancing kitchen efficiency. These systems display orders digitally, making it easier for chefs to manage and prioritize tasks.",
-            },
-          ],
-        },
-      ],
-    };
-
-    try {
-      const response = await addBlog(data);
-      console.log("Blog added successfully:", response);
-    } catch (error) {
-      console.error("Error adding blog:", error);
-    }
-  };
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Heading" value={"heading"} />
-        <textarea placeholder="Paragraph" value={"paragraph"}></textarea>
-        {/* Add more input fields for other blog data */}
-        <button type="submit">Add Blog</button>
-      </form>
       <form className="flex w-full flex-col lg:flex-row" onSubmit={sendEmail}>
         <div className="flex w-full lg:w-1/2">
           <ScheduleMeeting

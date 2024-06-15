@@ -8,6 +8,7 @@ export const revalidate = 0;
 
 export default async function Scope({ params }) {
   const scope = await getPage(params.industry + "/" + params.scope);
+  console.log("SCOPE: " + scope);
   const sortedSections = scope.content.sort((a, b) => {
     if (a.content && !b.content) {
       return -1; // a comes before b if a.content exists and b.content does not
