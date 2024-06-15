@@ -18,6 +18,8 @@ const BlogGenerator = () => {
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
   const [backup, setBackup] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(""); // State for success message
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -196,10 +198,12 @@ const BlogGenerator = () => {
     try {
       const blogpost = await addBlog(response);
       console.log("Blog added successfully:", blogpost);
+      setSuccessMessage("Blog post added successfully!"); // Set success message
     } catch (error) {
       console.error("Error adding blog:", error);
     }
   };
+
   return (
     <div className="flex items-center flex-col">
       <H1>Blog Post Generator</H1>
@@ -261,6 +265,11 @@ const BlogGenerator = () => {
             {loading ? "Posting..." : "Post Blog Post"}
           </button>{" "}
         </form>
+      )}
+      {successMessage && (
+        <div className="bg-green-500 text-white p-4 rounded-lg my-4">
+          {successMessage}
+        </div>
       )}
       {backup && (
         <div className="sm:w-1/2  overflow-auto	bg-neutral-900 p-4 rounded-lg">
