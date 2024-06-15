@@ -200,6 +200,7 @@ const BlogGenerator = () => {
       console.log("Blog added successfully:", blogpost);
       setSuccessMessage("Blog post added successfully!"); // Set success message
     } catch (error) {
+      setSuccessMessage(error); // Set success message
       console.error("Error adding blog:", error);
     }
   };
