@@ -273,7 +273,7 @@ const BlogGenerator = () => {
         </div>
       )}
       {backup && (
-        <div className="sm:w-1/2  overflow-auto	bg-neutral-900 p-4 rounded-lg">
+        <div className="sm:w-1/2 w-screen overflow-auto	bg-neutral-900 p-4 rounded-lg">
           <h2>backup</h2>
           <pre>{JSON.stringify(backup)}</pre>
         </div>
