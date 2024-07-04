@@ -19,7 +19,7 @@ export const metadata = {
 export default async function Home() {
   return (
     <div className=" mx-auto max-w-7xl">
-      <div className="relative max-h-screen h-[80dvh] sm:h-[700px]">
+      <div className="relative max-h-screen h-[70dvh] sm:h-[700px]">
         <Image
           alt="maximize"
           src={"/background.png"}
