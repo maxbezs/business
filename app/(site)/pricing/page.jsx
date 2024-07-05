@@ -145,37 +145,52 @@ export default async function Pricing() {
       <div className="mt-12 grid max-w-7xl mx-auto grid-cols-1 gap-12 lg:gap-3 lg:grid-cols-5 px-8">
         <section className="h-fit flex flex-col overflow-hidden rounded-md p-6 border border-white/[0.15]">
           <h3 className="flex items-centertext-gray-200 text-sm font-semibold">
-            <span>Free</span>
+            <span>Pay as you go</span>
           </h3>
           <p className="relative flex tracking-tight text-gray-200 mt-5 text-3xl">
             <span className="space-x-1">
-              $0
+              $70
               <span className="text-sm tracking-normal text-gray-400">
-                /month
+                /day
               </span>
             </span>
           </p>
           <p className="mt-4 text-sm text-gray-200 dark:text-gray-400">
-            The only guide for solopreneur
+            Built for individuals
           </p>
           <a
             className="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-medium outline-2 outline-offset-2 transition-colors border border-transparent bg-neutral-800 dark:bg-transparent text-white hover:bg-background-dark dark:border dark:border-white/10 dark:hover:border-white/20 mt-6"
-            href="/start"
+            href="/"
           >
-            Get guide for free
+            Start Now
           </a>
-          {/*<div className="order-last mt-6">
+          <div className="order-last mt-6">
             <ul
               role="list"
               className="-my-2 divide-y text-sm divide-gray-200/60 text-gray-200 dark:divide-white/10 dark:text-gray-300"
             >
               <li className="flex py-2.5">
                 <TickMark />
-
-                <span className="ml-2">Custom domain</span>
+                <span className="ml-2">Day-to-day payment</span>
+              </li>
+              <li className="flex py-2.5">
+                <TickMark />
+                <span className="ml-2 underline">One request at a time</span>
+              </li>
+              <li className="flex py-2.5">
+                <TickMark />
+                <span className="ml-2 ">Average 36 hour delivery</span>
+              </li>
+              <li className="flex py-2.5">
+                <TickMark />
+                <span className="ml-2 ">Limited users</span>
+              </li>{" "}
+              <li className="flex py-2.5">
+                <TickMark />
+                <span className="ml-2 ">Limited features</span>
               </li>
             </ul>
-          </div>*/}
+          </div>
         </section>
         {plans.map((plan, index) => (
           <PlanSection key={index} {...plan} />
@@ -217,7 +232,7 @@ export default async function Pricing() {
               </li>
               <li className="flex py-2.5">
                 <TickMark />
-                <span className="ml-2">Unlimited servers</span>
+                <span className="ml-2">Unlimited</span>
               </li>
             </ul>
           </div>
