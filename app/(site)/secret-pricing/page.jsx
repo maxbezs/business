@@ -3,6 +3,21 @@ export const revalidate = 0;
 
 export const plans = [
   {
+    planType: "Pay as you go",
+    description: "Built for individuals",
+    price: "$0.1",
+    features: ["Pause or cancel anytime"],
+    buttonText: "Start now",
+    buttonLink:
+      process.env.NODE_ENV === "production"
+        ? "https://buy.stripe.com/cN23cWeuIe3dgAU28f"
+        : "https://buy.stripe.com/test_aEUcO1f7D2HW7q8144",
+    priceId:
+      process.env.NODE_ENV === "production"
+        ? "price_1PaKiyHlVYFFZza21FJEsAqv"
+        : "price_1PJGpFHlVYFFZza2LiWK0d99",
+  },
+  {
     planType: "Small Business",
     description: "Built for growth",
     price: "$0.1",

@@ -160,7 +160,7 @@ export default async function Pricing() {
           </p>
           <a
             className="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-medium outline-2 outline-offset-2 transition-colors border border-transparent bg-neutral-800 dark:bg-transparent text-white hover:bg-background-dark dark:border dark:border-white/10 dark:hover:border-white/20 mt-6"
-            href="/"
+            href="https://buy.stripe.com/eVa8xg86k9MX1G06ou"
           >
             Start Now
           </a>
