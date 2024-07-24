@@ -78,7 +78,7 @@ const BlogGenerator = () => {
       poster: {
         _type: "image",
         asset: {
-          _ref: "image-2c611fe816da517c00c299c8ff9e536c2156a5c5-1848x782-jpg",
+          _ref: "",
           _type: "reference",
         },
       },
